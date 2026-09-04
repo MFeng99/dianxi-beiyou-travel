@@ -12,12 +12,13 @@ import subprocess
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent
 REPO = "MFeng99/dianxi-beiyou-travel"
 BRANCH = "main"
-FILES = ["index.html"]  # 要上传的文件，可自行加
+FILES = ["index.html", "一键更新到GitHub.bat", "上传更新.py", ".gitignore"]
 URL = "https://mfeng99.github.io/dianxi-beiyou-travel/"
 
 os.chdir(ROOT)
@@ -75,13 +76,22 @@ def api(path, method="GET", data=None, timeout=60):
         return {"_error": -1, "_body": str(e)[:300]}
 
 
+def enc(path):
+    """中文文件名需要 URL 编码才能请求 GitHub API"""
+    return urllib.parse.quote(path)
+
+
+def remote_meta(path):
+    return api(f"/repos/{REPO}/contents/{enc(path)}?ref={BRANCH}")
+
+
 def remote_sha(path):
-    d = api(f"/repos/{REPO}/contents/{path}?ref={BRANCH}")
+    d = remote_meta(path)
     return d.get("sha") if "sha" in d else None
 
 
 def remote_content(path):
-    d = api(f"/repos/{REPO}/contents/{path}?ref={BRANCH}")
+    d = remote_meta(path)
     if "content" in d and d.get("encoding") == "base64":
         return base64.b64decode(d["content"])
     return None
@@ -93,7 +103,7 @@ def api_upload(path, message):
     remote = remote_content(path)
     if remote == local:
         return "skip", f"{path} 云端已是最新，无需上传"
-    d = api(f"/repos/{REPO}/contents/{path}", "PUT", {
+    d = api(f"/repos/{REPO}/contents/{enc(path)}", "PUT", {
         "message": message,
         "content": base64.b64encode(local).decode("utf-8"),
         "sha": remote_sha(path),
