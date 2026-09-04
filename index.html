@@ -93,6 +93,31 @@ section{margin-bottom:34px}
 .must{display:inline-block;background:var(--red);color:#fff;font-size:10.5px;padding:1px 6px;border-radius:4px;margin-left:5px;vertical-align:1px;font-weight:700}
 .must.soft{background:var(--gold)}
 
+/* ============ 顺路打卡 ============ */
+.atable{width:100%;border-collapse:collapse;font-size:13px}
+.atable th{background:var(--gold);color:#fff;font-weight:600;padding:10px 8px;text-align:left;font-size:12.5px}
+.atable td{padding:11px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.atable tr:last-child td{border-bottom:none}
+.atable tr:nth-child(even) td{background:#fafcfd}
+.atable .sp{font-weight:700;white-space:nowrap}
+.atable .sp small{display:block;font-weight:400;color:var(--gray);font-size:11.5px;margin-top:2px;white-space:normal}
+.atable .why{font-size:12.5px;color:var(--gray);line-height:1.65}
+.atable .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.free{color:var(--green);font-weight:700}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:720px){.plans{grid-template-columns:1fr}}
+.plan{border:1px solid var(--line);border-radius:11px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.plan.pick{border:2px solid var(--green)}
+.plan-h{padding:10px 12px;font-weight:800;font-size:14px;text-align:center;border-bottom:1px solid var(--line);background:#f0f3f7;color:var(--gray)}
+.plan.pick .plan-h{background:var(--green-l);color:var(--green)}
+.plan-b{padding:12px 13px;font-size:13px;flex:1}
+.plan-b .li{padding:4px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:6px}
+.plan-b .li:last-child{border-bottom:none}
+.plan-b .li .lb{color:var(--gray);font-size:12.5px}
+.plan-b .li .vl{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.plan-n{margin-top:9px;padding-top:8px;border-top:1px solid var(--line);font-size:12px;color:var(--gray);line-height:1.65}
+.plan-n b{color:var(--ink)}
+
 /* ============ 行程总览 ============ */
 .ovl{background:#fff;border:1px solid var(--line);border-radius:11px;padding:5px 0}
 .ovrow{display:flex;align-items:stretch;border-bottom:1px solid var(--line)}
@@ -480,10 +505,121 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 4. 费用明细 ============ -->
+<!-- ============ 4. 沿途顺路打卡 ============ -->
 <section>
   <div class="sec-h">
     <div class="no">4</div>
+    <h2>沿途顺路打卡（边玩边去）</h2>
+    <div class="hint">自驾最大的优势<br>就是顺路扫货</div>
+  </div>
+
+  <div class="gold-note">
+    <b>自驾相对动车最大的隐藏福利：下面这些点，坐火车的人一个都去不了。</b>
+    全部在高速沿线，绕路成本从 0 到 105 km 不等。最贵的门票 130 元，三个干脆免费。
+  </div>
+
+  <div class="card">
+    <table class="atable">
+      <thead>
+        <tr><th style="width:20%">景点</th><th style="width:12%">绕路成本</th><th style="width:15%">门票</th><th style="width:10%">停留</th><th>为什么值得</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="sp">普者黑<small>丘北 · 去程 G80 沿线</small></td>
+          <td class="num">+105 km</td>
+          <td class="num">大门免费<br><span class="free">观光通票 65</span></td>
+          <td class="num">3–4 小时</td>
+          <td class="why"><b>10 月是普者黑全年最佳摄影季</b>：荷花渐谢、稻田金黄、游客锐减、通透度高。312 座孤峰 + 54 个湖泊 + 4 万亩荷塘。<b>青龙山免费登顶</b>（20–30 分钟）是全景区「上帝视角」总机位，晨雾日出和日暮晚霞都是大片。注意：核心区不让外来车进，要停外围转观光车。</td>
+        </tr>
+        <tr>
+          <td class="sp">弥勒东风韵<small>去程 G80 沿线</small></td>
+          <td class="num"><span class="free">0 km</span></td>
+          <td class="num">80<br><span class="free">学生 / 军人 40</span></td>
+          <td class="num">1.5 小时</td>
+          <td class="why">雕塑家罗旭用当地红砖造的异形建筑群——万花筒、半朵云、印章坊，<b>国内独一份，出片率极高</b>。17:00 后斜光打在红砖上最好看，顺路解决晚饭再走。就在高速口边上，几乎零绕路。</td>
+        </tr>
+        <tr>
+          <td class="sp">石林<small>去程 G80 沿线</small></td>
+          <td class="num"><span class="free">0 km</span></td>
+          <td class="num">130<br><span class="free">学生 65</span></td>
+          <td class="num">2.5 小时</td>
+          <td class="why">世界自然遗产，喀斯特地貌教科书。<b>但说实话：国庆人挤人、商业化重，性价比一般。</b>时间紧就跳过，把预算留给普者黑。</td>
+        </tr>
+        <tr>
+          <td class="sp">沙溪古镇<small>剑川 · 大理↔丽江之间</small></td>
+          <td class="num">+40 km</td>
+          <td class="num"><span class="free">免费</span></td>
+          <td class="num">2–3 小时</td>
+          <td class="why">茶马古道上<b>唯一完整保存</b>的千年古集市，2001 年入选世界濒危建筑保护名录。玉津桥清晨薄雾、寺登街红砂石板上几百年的马蹄凹槽、欧阳大院的「三坊一照壁」。<b>商业化程度只有丽江的三分之一</b>，本地白族人还住在这儿。</td>
+        </tr>
+        <tr>
+          <td class="sp">兴义万峰林<small>贵州 · 返程 G78 沿线</small></td>
+          <td class="num"><span class="free">+38 km</span></td>
+          <td class="num">70<br><span class="free">学生 50</span></td>
+          <td class="num">2–3 小时</td>
+          <td class="why">上万座锥状喀斯特峰林，徐霞客那句「天下山峰何其多，惟有此处峰成林」说的就是这儿。<b>10 月稻田金黄，是万峰林一年里颜色最丰富的季节</b>。八卦田、将军峰、下纳灰村是经典机位。<b>绕路成本全场最低。</b></td>
+        </tr>
+        <tr>
+          <td class="sp">马岭河峡谷<small>兴义市区旁</small></td>
+          <td class="num">同上</td>
+          <td class="num">70<br><span class="free">学生 35</span></td>
+          <td class="num">2–3 小时</td>
+          <td class="why">「地球最美伤疤」，地缝峡谷 + 上百条瀑布。<b>但要说实话：6–8 月丰水期才是巅峰，10 月水量一般。</b>想省时间可以只去万峰林，它俩挨着，二选一不亏。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="plans" style="margin-top:13px">
+    <div class="plan">
+      <div class="plan-h">方案 1 · 只加返程</div>
+      <div class="plan-b">
+        <div class="li"><span class="lb">新增景点</span><span class="vl">万峰林 + 马岭河</span></div>
+        <div class="li"><span class="lb">绕路</span><span class="vl">+38 km</span></div>
+        <div class="li"><span class="lb">人均多花</span><span class="vl">+¥95</span></div>
+        <div class="li"><span class="lb">到家时间</span><span class="vl">10/8 晚</span></div>
+        <div class="plan-n"><b>优点：</b>前面 8 天<b>一天都不用改</b>，9/27 抢票日期完全不变。<br><b>缺点：</b>错过普者黑。</div>
+      </div>
+    </div>
+    <div class="plan">
+      <div class="plan-h">方案 2 · 只加去程</div>
+      <div class="plan-b">
+        <div class="li"><span class="lb">新增景点</span><span class="vl">普者黑 + 弥勒</span></div>
+        <div class="li"><span class="lb">绕路</span><span class="vl">+105 km</span></div>
+        <div class="li"><span class="lb">人均多花</span><span class="vl">+¥130</span></div>
+        <div class="li"><span class="lb">到家时间</span><span class="vl">10/7 晚</span></div>
+        <div class="plan-n"><b>优点：</b>普者黑是全程最值的一个顺路点，10 月正当季。<br><b>缺点：</b>10/1 要开 663 km，全程最累的一天。</div>
+      </div>
+    </div>
+    <div class="plan pick">
+      <div class="plan-h">方案 3 · 全加 ⭐</div>
+      <div class="plan-b">
+        <div class="li"><span class="lb">新增景点</span><span class="vl">全部 5 个</span></div>
+        <div class="li"><span class="lb">绕路</span><span class="vl">+183 km</span></div>
+        <div class="li"><span class="lb">人均多花</span><span class="vl">+¥230</span></div>
+        <div class="li"><span class="lb">到家时间</span><span class="vl">10/8 晚</span></div>
+        <div class="plan-n"><b>优点：</b>人均多 230 元换 5 个景点，边际成本极低。<br><b>缺点：</b>10/8 才到家，全程强度最大。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px;padding:13px 15px">
+    <div style="font-size:13.5px;line-height:1.9">
+      <b style="color:var(--blue)">如果加了普者黑，去程怎么排？</b><br>
+      <span style="color:var(--gray);font-size:12.5px">
+      <b>9/30（周三）</b>15:00 平果出发 → 约 21:00 抵普者黑（492 km / 5.8h），宿景区外停车场或民宿。<br>
+      <b>10/1（周四）</b>06:30 登青龙山看晨雾日出 → 09:00 仙人洞村 / 环村 → <b>11:00 出发</b> → 顺路停弥勒东风韵（G80 边上，1.5h）→ <b>约 21:00 抵大理</b>，晚上逛大理古城。<br>
+      <b>10/2 起完全不变</b>，10/4 玉龙雪山日照金山照旧 —— <b style="color:var(--red)">9/27 的抢票日期不用改</b>。<br>
+      ⚠️ 唯一代价：10/1 是全程最硬的一天（上午玩 + 下午开 663 km），必须两人轮换，且国庆首日高速可能堵车。
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. 费用明细 ============ -->
+<section>
+  <div class="sec-h">
+    <div class="no">5</div>
     <h2>费用明细（5 人合计）</h2>
     <div class="hint">不含餐饮<br>住宿费 ≈ 0</div>
   </div>
@@ -539,10 +675,10 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 5. 门票优惠明细 ============ -->
+<!-- ============ 6. 门票优惠明细 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">5</div>
+    <div class="no">6</div>
     <h2>门票优惠明细</h2>
     <div class="hint">4 学生 + 1 退伍军人<br>共省 ¥1,161</div>
   </div>
@@ -604,10 +740,10 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 6. 自驾 vs 动车 ============ -->
+<!-- ============ 7. 自驾 vs 动车 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">6</div>
+    <div class="no">7</div>
     <h2>自驾 vs 动车 对比</h2>
     <div class="hint">5 人同口径<br>均不含餐饮</div>
   </div>
@@ -653,10 +789,10 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 7. 装备清单 ============ -->
+<!-- ============ 8. 装备清单 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">7</div>
+    <div class="no">8</div>
     <h2>住宿方案 + 装备清单</h2>
     <div class="hint">睡车里 / 帐篷<br>钟点房洗澡</div>
   </div>
@@ -749,10 +885,10 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 8. 关键时间线 ============ -->
+<!-- ============ 9. 关键时间线 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">8</div>
+    <div class="no">9</div>
     <h2>关键时间线（别错过）</h2>
     <div class="hint">红色 = 错过就没了</div>
   </div>
@@ -793,10 +929,10 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 9. 风险提示 ============ -->
+<!-- ============ 10. 风险提示 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">9</div>
+    <div class="no">10</div>
     <h2>风险提示</h2>
   </div>
 
@@ -817,11 +953,7 @@ footer b{color:var(--blue)}
   <b>国庆滇西北 8 日自驾攻略</b><br>
   平果 → 大理 → 丽江 → 香格里拉 · 5 人 · 9/30 – 10/7<br>
   <span style="font-size:11px;opacity:.8">费用与政策为估算参考，出发前请以 12306 / 景区官网 / 美团实时查询为准</span><br>
-<<<<<<< HEAD
   <span style="font-size:11px;opacity:.7">最后更新：2026-09-05</span>
-=======
-  <span style="font-size:11px;opacity:.7">最后更新：2026-09-04</span>
->>>>>>> 1270ea8 (更新攻略 2026-09-05 02:22)
 </footer>
 
 </div>
