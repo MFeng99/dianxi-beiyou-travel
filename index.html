@@ -2,384 +2,822 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>国庆滇西北8日自驾 · 平果→大理→丽江→香格里拉</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>国庆滇西北 8 日自驾 · 平果 → 大理 → 丽江 → 香格里拉</title>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#f0f4f8;color:#1a2a3a;line-height:1.6;padding-bottom:30px}
-  .wrap{max-width:680px;margin:0 auto;padding:12px}
-  .hero{background:linear-gradient(135deg,#1a5fa8 0%,#2e86c1 60%,#48c9b0 100%);color:#fff;border-radius:16px;padding:22px 18px;margin-bottom:12px}
-  .hero h1{font-size:22px;margin-bottom:6px}
-  .hero p{font-size:13px;opacity:.92}
-  .hero .tag{display:inline-block;background:rgba(255,255,255,.2);border-radius:20px;padding:2px 10px;font-size:11px;margin:8px 6px 0 0}
-  .card{background:#fff;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,40,80,.06)}
-  .card h2{font-size:17px;color:#1a5fa8;margin-bottom:10px;padding-left:10px;border-left:4px solid #2e86c1}
-  .card h3{font-size:14px;color:#2c3e50;margin:12px 0 6px}
-  table{width:100%;border-collapse:collapse;font-size:12px;margin:8px 0}
-  th{background:#eaf2fa;color:#1a5fa8;padding:7px 6px;text-align:left;font-weight:600}
-  td{padding:7px 6px;border-bottom:1px solid #eef2f6;vertical-align:top}
-  tr:last-child td{border-bottom:none}
-  .good{color:#1e8e4e;font-weight:600}
-  .bad{color:#c0392b;font-weight:600}
-  .warn{background:#fff8e6;border-left:4px solid #f0b429;padding:10px 12px;border-radius:8px;font-size:13px;margin:8px 0}
-  .danger{background:#fdeaea;border-left:4px solid #c0392b;padding:10px 12px;border-radius:8px;font-size:13px;margin:8px 0}
-  .ok{background:#e9f7ef;border-left:4px solid #1e8e4e;padding:10px 12px;border-radius:8px;font-size:13px;margin:8px 0}
-  .plan{background:#f4f8fc;border-radius:10px;padding:12px;margin:8px 0;border:1px solid #dce8f2}
-  .plan.best{border:2px solid #1e8e4e;background:#f2fbf6}
-  .badge{font-size:10px;color:#fff;border-radius:4px;padding:2px 6px}
-  .b-blue{background:#2e86c1}.b-green{background:#1e8e4e}.b-gray{background:#95a5a6}.b-red{background:#c0392b}
-  .day{background:#fff;border-radius:12px;padding:14px;margin-bottom:10px;box-shadow:0 2px 6px rgba(0,40,80,.05);border-top:4px solid #2e86c1}
-  .day.d2{border-top-color:#48c9b0}.day.d3{border-top-color:#8e44ad}.day.d4{border-top-color:#e67e22}
-  .day.d5{border-top-color:#e74c3c}.day.d6{border-top-color:#16a085}.day.d7{border-top-color:#34495e}
-  .day h4{font-size:15px;color:#1a2a3a;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-  .day .date{font-size:11px;color:#7f8c8d;font-weight:400}
-  .tl{list-style:none;margin:6px 0}
-  .tl li{position:relative;padding:6px 0 6px 24px;font-size:13px;border-left:2px solid #dce8f2;margin-left:8px}
-  .tl li::before{content:'';position:absolute;left:-5px;top:12px;width:8px;height:8px;border-radius:50%;background:#2e86c1}
-  .tl li .t{color:#1a5fa8;font-weight:600;margin-right:4px}
-  .fee{display:inline-block;font-size:11px;border-radius:10px;padding:1px 8px;margin-left:4px}
-  .free{background:#e9f7ef;color:#1e8e4e}
-  .pay{background:#fdeaea;color:#c0392b}
-  .che{background:#fef5e7;color:#b9770e}
-  .nav-btn{display:inline-block;background:#2e86c1;color:#fff;text-decoration:none;font-size:12px;border-radius:6px;padding:3px 10px;margin:3px 3px 0 0}
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
-  .stat{background:#f4f8fc;border-radius:10px;padding:10px;text-align:center}
-  .stat .num{font-size:20px;font-weight:700;color:#1a5fa8}
-  .stat .lbl{font-size:11px;color:#7f8c8d}
-  .save{background:linear-gradient(135deg,#fff9e6,#fff3cd);border:1px solid #f0e0a0;border-radius:10px;padding:10px 12px;font-size:13px;margin:6px 0}
-  .save b{color:#b9770e}
-  .route-flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0;font-size:13px}
-  .route-flow .node{background:#eaf2fa;color:#1a5fa8;border-radius:8px;padding:4px 10px;font-weight:600}
-  .route-flow .arr{color:#95a5a6}
-  .sleep-box{background:#eef6ec;border-radius:8px;padding:8px 10px;margin:6px 0;font-size:12px}
-  .sleep-box b{color:#1e8e4e}
-  footer{text-align:center;font-size:11px;color:#95a5a6;padding:16px}
+:root{
+  --blue:#0f4c81;
+  --blue-l:#e8f1f8;
+  --blue-m:#2a6fae;
+  --gold:#e07b28;
+  --gold-l:#fdf0e3;
+  --gold-b:#f0a860;
+  --green:#2e7d52;
+  --green-l:#e6f4ec;
+  --red:#c0392b;
+  --red-l:#fdecea;
+  --ink:#1a1a1a;
+  --gray:#5f6b7a;
+  --line:#dde5ee;
+  --bg:#f5f8fb;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.75;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:920px;margin:0 auto;padding:0 14px 60px}
+
+/* ============ HERO ============ */
+.hero{
+  background:linear-gradient(135deg,var(--blue) 0%,#1a6ba8 55%,#2a86c4 100%);
+  color:#fff;padding:34px 20px 30px;margin:0 -14px 22px;
+}
+.hero .tag{
+  display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);
+  padding:3px 12px;border-radius:20px;font-size:12.5px;letter-spacing:.5px;margin-bottom:12px;
+}
+.hero h1{font-size:27px;font-weight:800;line-height:1.35;letter-spacing:-.3px}
+.hero .sub{font-size:14.5px;opacity:.93;margin-top:8px}
+.hero .route{
+  margin-top:16px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13.5px;font-weight:600;
+}
+.hero .route span{background:rgba(255,255,255,.16);padding:5px 11px;border-radius:6px}
+.hero .route i{opacity:.6;font-style:normal}
+
+/* ============ 结论卡片 ============ */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:26px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:11px;padding:15px 14px;text-align:center}
+.stat .k{font-size:11.5px;color:var(--gray);letter-spacing:.5px;font-weight:600}
+.stat .v{font-size:23px;font-weight:800;color:var(--blue);margin:4px 0 1px;letter-spacing:-.5px}
+.stat .v small{font-size:13px;font-weight:600}
+.stat .n{font-size:11.5px;color:var(--gray)}
+.stat.hi .v{color:var(--gold)}
+
+/* ============ 通用区块 ============ */
+section{margin-bottom:34px}
+.sec-h{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+.sec-h .no{
+  width:27px;height:27px;flex:0 0 27px;border-radius:7px;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:700;
+}
+.sec-h h2{font-size:18.5px;font-weight:800;letter-spacing:-.2px}
+.sec-h .hint{font-size:12px;color:var(--gray);font-weight:400;margin-left:auto;text-align:right}
+
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;overflow:hidden}
+
+/* ============ 黄金时段表 ============ */
+.gold-note{
+  background:var(--gold-l);border:1px solid var(--gold-b);border-left:4px solid var(--gold);
+  border-radius:9px;padding:12px 14px;margin-bottom:13px;font-size:13.5px;color:#7a4210;line-height:1.7;
+}
+.gold-note b{color:#5c3008}
+.gtable{width:100%;border-collapse:collapse;font-size:13.5px}
+.gtable th{
+  background:var(--blue);color:#fff;font-weight:600;padding:10px 8px;text-align:left;font-size:12.5px;
+  letter-spacing:.3px;
+}
+.gtable th:first-child{border-radius:0}
+.gtable td{padding:11px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.gtable tr:last-child td{border-bottom:none}
+.gtable tr:nth-child(even) td{background:#fafcfd}
+.gtable .spot{font-weight:700;color:var(--ink);white-space:nowrap}
+.gtable .spot small{display:block;font-weight:400;color:var(--gray);font-size:11.5px;margin-top:2px;white-space:normal}
+.timebar{display:inline-block;padding:4px 10px;border-radius:6px;font-weight:700;font-size:12.5px;white-space:nowrap}
+.t-gold{background:linear-gradient(135deg,#e07b28,#f0a860);color:#fff}
+.t-blue{background:var(--blue-l);color:var(--blue);border:1px solid #bcd7ec}
+.t-green{background:var(--green-l);color:var(--green);border:1px solid #b8dcc8}
+.t-gray{background:#eef1f5;color:var(--gray);border:1px solid #dde2e8}
+.gtable .why{font-size:12.5px;color:var(--gray);line-height:1.6}
+.must{display:inline-block;background:var(--red);color:#fff;font-size:10.5px;padding:1px 6px;border-radius:4px;margin-left:5px;vertical-align:1px;font-weight:700}
+.must.soft{background:var(--gold)}
+
+/* ============ 行程总览 ============ */
+.ovl{background:#fff;border:1px solid var(--line);border-radius:11px;padding:5px 0}
+.ovrow{display:flex;align-items:stretch;border-bottom:1px solid var(--line)}
+.ovrow:last-child{border-bottom:none}
+.ovd{
+  flex:0 0 62px;background:var(--blue-l);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:10px 4px;border-right:1px solid var(--line);
+}
+.ovd .dd{font-size:16px;font-weight:800;color:var(--blue);line-height:1.1}
+.ovd .dt{font-size:10.5px;color:var(--gray);margin-top:1px}
+.ovc{flex:1;padding:10px 13px;display:flex;flex-direction:column;justify-content:center}
+.ovc .tt{font-size:14px;font-weight:700}
+.ovc .ss{font-size:12px;color:var(--gray);margin-top:2px}
+.ovc .gg{font-size:12px;color:var(--gold);font-weight:700;margin-top:3px}
+.ovrow.key{background:linear-gradient(90deg,var(--gold-l) 0%,#fff 60%)}
+
+/* ============ 每日详情 ============ */
+.day{background:#fff;border:1px solid var(--line);border-radius:11px;margin-bottom:13px;overflow:hidden}
+.day-h{
+  background:linear-gradient(135deg,var(--blue) 0%,#1a6ba8 100%);color:#fff;padding:11px 15px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.day-h .dn{font-size:15px;font-weight:800;letter-spacing:-.2px}
+.day-h .dd2{font-size:12px;opacity:.85}
+.day-h .dtag{
+  margin-left:auto;font-size:11.5px;background:rgba(255,255,255,.2);padding:3px 9px;border-radius:5px;
+}
+.day-h.gold{background:linear-gradient(135deg,#d4701f 0%,#e8934a 100%)}
+.day-b{padding:4px 0}
+.row{display:flex;gap:11px;padding:9px 15px;border-bottom:1px solid #f0f4f8;align-items:flex-start}
+.row:last-child{border-bottom:none}
+.row .tm{
+  flex:0 0 52px;font-size:12.5px;font-weight:700;color:var(--blue);padding-top:1px;
+  font-variant-numeric:tabular-nums;
+}
+.row .ct{flex:1;font-size:13.5px}
+.row .ct b{color:var(--ink)}
+.row .ct .note{display:block;font-size:12px;color:var(--gray);margin-top:2px;line-height:1.6}
+.row.g{background:linear-gradient(90deg,var(--gold-l),#fff)}
+.row.g .tm{color:var(--gold)}
+.row.g .ct b{color:#8a4a10}
+.row.g::before{content:""}
+.row.tip{background:var(--red-l)}
+.row.tip .ct{color:#8a2b20;font-size:12.5px}
+.row.tip .tm{color:var(--red)}
+
+/* ============ 费用 ============ */
+.ftable{width:100%;border-collapse:collapse;font-size:13.5px}
+.ftable th{background:var(--blue-l);color:var(--blue);font-weight:700;padding:9px 10px;text-align:left;font-size:12.5px;border-bottom:1px solid #cfe0ee}
+.ftable td{padding:10px;border-bottom:1px solid var(--line)}
+.ftable tr:last-child td{border-bottom:none}
+.ftable .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.ftable .sub{font-size:11.5px;color:var(--gray);display:block;font-weight:400;margin-top:2px}
+.ftable tr.sum td{background:var(--blue-l);font-weight:800;font-size:15px;color:var(--blue);border-top:2px solid var(--blue)}
+.ftable tr.sum .num{font-size:17px}
+.ftable tr.cut td .num{color:var(--green)}
+
+/* ============ 对比 ============ */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.cmp{grid-template-columns:1fr}}
+.cbox{border:1px solid var(--line);border-radius:11px;background:#fff;overflow:hidden}
+.cbox.win{border:2px solid var(--green)}
+.cbox-h{padding:10px 14px;font-weight:800;font-size:14.5px;text-align:center;border-bottom:1px solid var(--line)}
+.cbox.win .cbox-h{background:var(--green-l);color:var(--green)}
+.cbox .cbox-h{background:#f0f3f7;color:var(--gray)}
+.cbox-b{padding:12px 14px}
+.cline{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.cline:last-child{border-bottom:none}
+.cline .lb{color:var(--gray)}
+.cline .vl{font-weight:700;font-variant-numeric:tabular-nums}
+.cbox .tot{margin-top:8px;padding-top:9px;border-top:2px solid var(--line);display:flex;justify-content:space-between;align-items:baseline}
+.cbox .tot .lb{font-size:13px;font-weight:700}
+.cbox .tot .vl{font-size:21px;font-weight:800;color:var(--blue);font-variant-numeric:tabular-nums}
+.cbox.win .tot .vl{color:var(--green)}
+.cbox .pp{text-align:center;font-size:12px;color:var(--gray);margin-top:4px}
+
+/* ============ 门票优惠 ============ */
+.tk{width:100%;border-collapse:collapse;font-size:13px}
+.tk th{background:var(--blue-l);color:var(--blue);padding:8px 7px;text-align:left;font-size:12px;font-weight:700;border-bottom:1px solid #cfe0ee}
+.tk td{padding:9px 7px;border-bottom:1px solid var(--line)}
+.tk tr:last-child td{border-bottom:none}
+.tk .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tk .old{color:#9aa5b1;text-decoration:line-through;font-size:12px}
+.tk .new{color:var(--green);font-weight:700}
+.tk tr.sum td{background:var(--green-l);font-weight:800;color:var(--green)}
+
+/* ============ 装备 ============ */
+.eq{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.eqbox{background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px 15px}
+.eqbox h4{font-size:13.5px;color:var(--blue);margin-bottom:7px;font-weight:800;display:flex;align-items:center;gap:6px}
+.eqbox ul{list-style:none;font-size:13px}
+.eqbox li{padding:3.5px 0 3.5px 17px;position:relative;color:#333}
+.eqbox li::before{content:"";position:absolute;left:3px;top:13px;width:5px;height:5px;border-radius:50%;background:var(--blue-m)}
+.eqbox li b{color:var(--red)}
+
+/* ============ 时间线提醒 ============ */
+.tl{background:#fff;border:1px solid var(--line);border-radius:11px;padding:5px 0}
+.tlrow{display:flex;gap:12px;padding:12px 15px;border-bottom:1px solid #f0f4f8;align-items:flex-start}
+.tlrow:last-child{border-bottom:none}
+.tlrow .tld{
+  flex:0 0 84px;font-size:12.5px;font-weight:800;color:#fff;background:var(--blue);
+  border-radius:6px;padding:4px 0;text-align:center;
+}
+.tlrow.urgent .tld{background:var(--red)}
+.tlrow.warn .tld{background:var(--gold)}
+.tlrow .tlc{flex:1;font-size:13.5px}
+.tlrow .tlc b{display:block;margin-bottom:2px}
+.tlrow .tlc span{font-size:12.5px;color:var(--gray);line-height:1.6}
+
+/* ============ 风险 ============ */
+.risk{background:#fff;border:1px solid var(--line);border-radius:11px;overflow:hidden}
+.risk-h{background:var(--red);color:#fff;padding:9px 15px;font-weight:800;font-size:14px}
+.risk ul{list-style:none;padding:8px 0}
+.risk li{padding:9px 15px 9px 38px;position:relative;font-size:13.5px;border-bottom:1px solid #f0f4f8;line-height:1.7}
+.risk li:last-child{border-bottom:none}
+.risk li::before{
+  content:"!";position:absolute;left:14px;top:10px;width:17px;height:17px;border-radius:50%;
+  background:var(--red-l);color:var(--red);font-weight:800;font-size:12px;
+  display:flex;align-items:center;justify-content:center;
+}
+.risk li b{color:var(--red)}
+
+footer{text-align:center;padding:26px 20px;color:var(--gray);font-size:12px;line-height:1.9;border-top:1px solid var(--line);margin-top:10px}
+footer b{color:var(--blue)}
+.pill{display:inline-block;background:var(--blue-l);color:var(--blue);font-size:11.5px;padding:2px 8px;border-radius:5px;font-weight:600;margin:0 3px 3px 0}
+.pill.g{background:var(--gold-l);color:#8a4a10}
 </style>
 </head>
 <body>
-<div class="wrap">
 
 <div class="hero">
-  <h1>🏔️ 国庆滇西北 8 日自驾</h1>
-  <p>平果 → 大理 → 丽江 → 香格里拉（9/30下午出发·自驾+睡车里/帐篷+钟点房洗澡）</p>
-  <span class="tag">📅 9月30日–10月7日</span>
-  <span class="tag">👥 5人出行</span>
-  <span class="tag">🚗 全程自驾</span>
-  <span class="tag">⛺ 睡车里/帐篷</span>
-  <span class="tag">💰 人均约 ¥703（不含餐）</span>
-</div>
-
-<!-- ============ 方案总览 ============ -->
-<div class="card">
-  <h2>🎯 方案确认：全程自驾·极致省钱</h2>
-  <div class="ok">✅ <b>核心策略</b>：同学的车，5人自驾，国庆高速免费（10/1-10/7），住宿睡车里/帐篷≈0元，洗澡开钟点房。把住宿费清零，只剩油费+门票。</div>
-  
-  <table>
-    <tr><th>项目</th><th>费用（5人合计）</th><th>人均</th><th>说明</th></tr>
-    <tr><td>⛽ 油费</td><td class="good">~1500元</td><td>300元</td><td>全程约2700km，7L/100km×8元/L</td></tr>
-    <tr><td>🛣️ 过路费</td><td class="good">0元</td><td>0元</td><td>国庆高速免费10/1 0:00-10/7 24:00</td></tr>
-    <tr><td>⛺ 住宿</td><td class="good">0元</td><td>0元</td><td>睡车里/帐篷</td></tr>
-    <tr><td>🚿 钟点房洗澡</td><td class="good">~200元</td><td>40元</td><td>大理/丽江/香格里拉各1次，30-50元/次</td></tr>
-    <tr><td>🎫 门票</td><td>~1316元</td><td>263元</td><td>4学生半价+1退伍军人免票，省了1374元！</td></tr>
-    <tr><td>📦 其他</td><td>~500元</td><td>100元</td><td>氧气瓶/停车费</td></tr>
-    <tr style="background:#eaf2fa"><td><b>合计</b></td><td class="good"><b>~3516元</b></td><td class="good"><b>~703元</b></td><td>不含餐饮，吃饭自行AA</td></tr>
-  </table>
-  
-  <div class="save">💰 <b>学生+退伍军人优惠省了1374元门票！</b>5人总费用仅3516元（不含餐），人均703元。对比动车方案人均2780元，5人直接省了<b>上万块</b>！</div>
-  
-  <h3>📊 自驾 vs 动车 方案对比（5人，不含餐饮）</h3>
-  <table>
-    <tr><th>项目</th><th>🚗 自驾方案（5人）</th><th>🚄 动车方案（5人）</th></tr>
-    <tr><td>城际交通</td><td class="good">~1500（油费）</td><td class="bad">~4700（往返动车票）</td></tr>
-    <tr><td>动车学生优惠</td><td>—</td><td class="good">学生票7.5折，省~880元</td></tr>
-    <tr><td>动车退伍军人优惠</td><td>—</td><td>普通退役军人无全国统一折扣，需全价</td></tr>
-    <tr><td>当地交通</td><td class="good">0（自驾）</td><td class="bad">~1200（包车/拼车）</td></tr>
-    <tr><td>过路费</td><td class="good">0（国庆免费）</td><td>0</td></tr>
-    <tr><td>住宿</td><td class="good">0（睡车里/帐篷）</td><td class="bad">~2400（民宿整租6晚）</td></tr>
-    <tr><td>钟点房洗澡</td><td>~200</td><td>0（住民宿含洗澡）</td></tr>
-    <tr><td>门票</td><td>~1316</td><td>~1316</td></tr>
-    <tr><td>其他</td><td>~500</td><td>~500</td></tr>
-    <tr style="background:#eaf2fa"><td><b>合计</b></td><td class="good"><b>~3516</b></td><td class="bad"><b>~10116</b></td></tr>
-    <tr style="background:#eaf2fa"><td><b>人均</b></td><td class="good"><b>~703</b></td><td class="bad"><b>~2023</b></td></tr>
-  </table>
-  
-  <div class="save">💰 <b>自驾比动车省了6600元！</b>自驾人均703 vs 动车人均2023，5人直接省6600元。省下的钱够吃好几顿牦牛火锅了。</div>
-  
-  <div class="warn">⚠️ <b>动车方案说明</b>：①平果→大理动车直达二等座335.5元，学生票7.5折约252元；②大理→丽江70元，学生票约53元；③丽江→香格里拉70元，学生票约53元；④退伍军人无动车票价优惠（仅残疾军人可半价），需全价；⑤动车往返5人约4700元（含1人全价）；⑥动车方案需另付当地交通（环洱海包车、虎跳峡包车等）约1200元；⑦动车方案住民宿6晚约2400元。</div>
-  
-  <div class="ok">✅ <b>结论：自驾方案完胜</b>。油费1500 vs 动车4700+当地交通1200=5900，光交通就省4400；加上住宿2400全免，总共省6600元。唯一的代价是D1/D7各开11-13小时（3本驾照轮换），但省下的钱值得。</div>
-</div>
-
-<!-- ============ 自驾路线 ============ -->
-<div class="card">
-  <h2>🗺️ 自驾路线总览</h2>
-  <div class="route-flow">
-    <span class="node">平果</span><span class="arr">→9/30下午出发</span><span class="node">昆明/楚雄(休整)</span><span class="arr">→10/1</span><span class="node">大理</span><span class="arr">→180km</span><span class="node">丽江</span><span class="arr">→180km</span><span class="node">香格里拉</span><span class="arr">→10/7返程</span><span class="node">平果</span>
+  <div class="wrap" style="padding:0">
+    <span class="tag">2026 国庆 · 5 人自驾 · 学生 + 退伍军人优惠</span>
+    <h1>国庆滇西北 8 日自驾</h1>
+    <div class="sub">平果出发 → 大理 → 丽江 → 香格里拉 · 9/30 下午出发 · 10/7 返程</div>
+    <div class="route">
+      <span>平果</span><i>›</i><span>大理</span><i>›</i><span>丽江</span><i>›</i><span>虎跳峡</span><i>›</i><span>香格里拉</span><i>›</i><span>返程</span>
+    </div>
   </div>
-  <table>
-    <tr><th>路段</th><th>里程</th><th>纯车程</th><th>路线</th></tr>
-    <tr><td>D1 平果→昆明/楚雄</td><td>~520km</td><td>~6h</td><td>G80广昆高速，9/30下午出发，中途休整过夜</td></tr>
-    <tr><td>D2 昆明/楚雄→大理</td><td>~450km</td><td>~5h</td><td>G56杭瑞高速，10/1上午到大理</td></tr>
-    <tr><td>大理→丽江</td><td>180km</td><td>2.5h</td><td>大丽高速</td></tr>
-    <tr><td>丽江→香格里拉</td><td>180km</td><td>2.5h</td><td>G214国道（丽香公路，山路注意）</td></tr>
-    <tr><td>D8 香格里拉→平果</td><td>1156km</td><td>13h</td><td>香格里拉→丽江→大理→昆明→平果</td></tr>
-    <tr style="background:#eaf2fa"><td><b>全程总计</b></td><td><b>~2700km</b></td><td><b>~29h</b></td><td>3本驾照轮换</td></tr>
-  </table>
-  
-  <div class="ok">✅ <b>9/30下午出发的三大好处</b>：①拆分976km长途为两天（520+450），不用一天硬扛11小时；②避开10/1早上的堵车高峰，10/1只需开5h；③9/30跑到昆明段路况好，夜间车少。</div>
 </div>
 
-<!-- ============ 8天行程 ============ -->
-<div class="card">
-  <h2>🗓️ 8天详细行程（9/30下午出发）</h2>
-  <div class="route-flow">
-    <span class="node">D1 9/30 赶路</span><span class="arr">→</span>
-    <span class="node">D2 10/1 到大理</span><span class="arr">→</span>
-    <span class="node">D3 10/2 环洱海</span><span class="arr">→</span>
-    <span class="node">D4 10/3 丽江</span><span class="arr">→</span>
-    <span class="node">D5 10/4 雪山</span><span class="arr">→</span>
-    <span class="node">D6 10/5 香格里拉</span><span class="arr">→</span>
-    <span class="node">D7 10/6 普达措</span><span class="arr">→</span>
-    <span class="node">D8 10/7 返程</span>
+<div class="wrap">
+
+<!-- ============ 核心结论 ============ -->
+<div class="stats">
+  <div class="stat hi"><div class="k">总花费（5人）</div><div class="v">¥5,2<small>04</small></div><div class="n">不含餐饮</div></div>
+  <div class="stat hi"><div class="k">人均</div><div class="v">¥1,0<small>41</small></div><div class="n">住宿费≈0</div></div>
+  <div class="stat"><div class="k">总里程</div><div class="v">2,8<small>00 km</small></div><div class="n">含市内绕行</div></div>
+  <div class="stat"><div class="k">比坐动车省</div><div class="v">¥5,9<small>80</small></div><div class="n">5 人合计</div></div>
+</div>
+
+<!-- ============ 1. 黄金时段 ============ -->
+<section>
+  <div class="sec-h">
+    <div class="no">1</div>
+    <h2>黄金时段速查表</h2>
+    <div class="hint">橙色 = 必卡点<br>错过大打折扣</div>
   </div>
 
+  <div class="gold-note">
+    <b>这张表是整个行程的核心。</b>同一景点，去对时间是明信片，去错时间是路人照。
+    橙色三项必须按时段卡死（日照金山、洱海日出、S 弯晨光），其余按颜色灵活调整。
+  </div>
+
+  <div class="card">
+    <table class="gtable">
+      <thead>
+        <tr><th style="width:28%">景点</th><th style="width:24%">黄金时段</th><th>为什么是这个时间</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="spot">玉龙雪山 · 日照金山<small>甘海子 / 冰川公园观景台</small></td>
+          <td><span class="timebar t-gold">06:40 – 07:30</span></td>
+          <td class="why">10 月 – 次年 4 月是日照金山黄金季（雨季云层厚，看不到）。<b>10/4 丽江日出 07:13</b>，金色覆盖峰顶仅 <b>15–20 分钟</b>，07:35 后变白雪山。必须 06:40 前站好位。</td>
+        </tr>
+        <tr>
+          <td class="spot">洱海 · 龙龛码头日出<small>大理</small></td>
+          <td><span class="timebar t-gold">06:30 – 07:40</span></td>
+          <td class="why">10 月初大理日出约 <b>07:00</b>，太阳从苍山背后翻上来打在水面，逆光剪影最美。07:40 后光线变硬，水面反光刺眼。</td>
+        </tr>
+        <tr>
+          <td class="spot">磻溪村 S 弯<small>生态廊道 · 大理</small></td>
+          <td><span class="timebar t-gold">07:30 – 08:30</span><span class="must">限时</span></td>
+          <td class="why"><b>9 点后旅行团大巴涌入 + 生态廊道机动车禁入</b>，车开不进去、人也挤爆。8 点前到才能拍到干净的弯道晨光。</td>
+        </tr>
+        <tr>
+          <td class="spot">松赞林寺 · 晨雾金顶<small>香格里拉</small></td>
+          <td><span class="timebar t-gold">07:30 – 09:00</span></td>
+          <td class="why">清晨山谷起雾，阳光斜打在金顶上，拉姆央措湖有完整倒影。10 点后雾散、光线顶光，照片发灰。原计划下午去 → <b>已改到早上</b>。</td>
+        </tr>
+        <tr>
+          <td class="spot">双廊 · 洱海日落<small>大理</small></td>
+          <td><span class="timebar t-blue">17:30 – 19:00</span></td>
+          <td class="why">10 月初大理日落约 <b>18:55</b>。提前 1 小时到占机位，苍山十九峰做背景，太阳落进洱海。</td>
+        </tr>
+        <tr>
+          <td class="spot">普达措国家公园<small>香格里拉</small></td>
+          <td><span class="timebar t-blue">09:00 – 13:00</span></td>
+          <td class="why">上午光线穿透林间，属都湖晨雾未散，野生动物活跃。下午高原易起云，湖面发暗。</td>
+        </tr>
+        <tr>
+          <td class="spot">虎跳峡 · 上虎跳<small>丽江 → 香格里拉途中</small></td>
+          <td><span class="timebar t-blue">10:30 – 13:00</span></td>
+          <td class="why">太阳升高后能照进峡谷，江水呈金沙色。下午峡谷背阴，水是灰绿色。</td>
+        </tr>
+        <tr>
+          <td class="spot">蓝月谷<small>玉龙雪山脚下</small></td>
+          <td><span class="timebar t-blue">11:00 – 14:00</span></td>
+          <td class="why">正午直射时湖水呈最饱和的蓝绿色（乳蓝色钙化湖，靠阳光散射）。早晚是灰蓝，不出片。</td>
+        </tr>
+        <tr>
+          <td class="spot">独克宗古城 · 转经筒<small>香格里拉</small></td>
+          <td><span class="timebar t-green">18:00 – 20:00</span></td>
+          <td class="why">傍晚金色斜光打在转经筒和白墙上，龟山大佛寺可俯拍古城全貌。晚上灯光亮起另有一番味道。</td>
+        </tr>
+        <tr>
+          <td class="spot">丽江古城 · 夜景<small>丽江</small></td>
+          <td><span class="timebar t-green">20:00 – 22:30</span></td>
+          <td class="why">红灯笼全亮、四方街人流最旺，酒吧街开始热闹。白天古城人多且商业化，观感一般。</td>
+        </tr>
+        <tr>
+          <td class="spot">大理古城<small>大理</small></td>
+          <td><span class="timebar t-gray">随时 / 傍晚更佳</span></td>
+          <td class="why">无强时段限制。避开正午暴晒即可，17:00 后逛最舒服，顺带解决晚餐。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 2. 行程总览 ============ -->
+<section>
+  <div class="sec-h">
+    <div class="no">2</div>
+    <h2>8 天行程总览</h2>
+    <div class="hint">金色行 = 卡黄金时段<br>的关键日</div>
+  </div>
+
+  <div class="ovl">
+    <div class="ovrow">
+      <div class="ovd"><div class="dd">D1</div><div class="dt">9/30 周三</div></div>
+      <div class="ovc"><div class="tt">平果 → 昆明方向（夜驾）</div><div class="ss">下午出发，服务区轮换开，宿车里</div></div>
+    </div>
+    <div class="ovrow">
+      <div class="ovd"><div class="dd">D2</div><div class="dt">10/1 周四</div></div>
+      <div class="ovc"><div class="tt">抵达大理 → 大理古城</div><div class="ss">下午到，逛古城 + 洋人街，休整</div></div>
+    </div>
+    <div class="ovrow key">
+      <div class="ovd"><div class="dd">D3</div><div class="dt">10/2 周五</div></div>
+      <div class="ovc"><div class="tt">洱海环湖一整圈</div><div class="ss">龙龛日出 → 磻溪 S 弯 → 喜洲 → 双廊日落</div><div class="gg">⚡ 07:00 出发，卡 3 个黄金时段</div></div>
+    </div>
+    <div class="ovrow">
+      <div class="ovd"><div class="dd">D4</div><div class="dt">10/3 周六</div></div>
+      <div class="ovc"><div class="tt">大理 → 丽江</div><div class="ss">180 km / 2.5h，下午丽江古城 + 夜景</div></div>
+    </div>
+    <div class="ovrow key">
+      <div class="ovd"><div class="dd">D5</div><div class="dt">10/4 周日</div></div>
+      <div class="ovc"><div class="tt">玉龙雪山（大索道 + 蓝月谷）</div><div class="ss">甘海子日照金山 → 冰川公园 → 蓝月谷</div><div class="gg">⚡ 05:40 出发，全行程最关键的一天</div></div>
+    </div>
+    <div class="ovrow">
+      <div class="ovd"><div class="dd">D6</div><div class="dt">10/5 周一</div></div>
+      <div class="ovc"><div class="tt">丽江 → 虎跳峡 → 香格里拉</div><div class="ss">200 km，峡谷 + 独克宗古城傍晚</div></div>
+    </div>
+    <div class="ovrow key">
+      <div class="ovd"><div class="dd">D7</div><div class="dt">10/6 周二</div></div>
+      <div class="ovc"><div class="tt">松赞林寺 → 普达措 → 纳帕海</div><div class="ss">晨雾金顶 → 高山湖泊 → 草原日落</div><div class="gg">⚡ 07:30 到寺，卡晨雾时段</div></div>
+    </div>
+    <div class="ovrow">
+      <div class="ovd"><div class="dd">D8</div><div class="dt">10/7 周三</div></div>
+      <div class="ovc"><div class="tt">香格里拉 → 平果（返程）</div><div class="ss">约 1,300 km，两天开 or 通宵轮换</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. 每日详细 ============ -->
+<section>
+  <div class="sec-h">
+    <div class="no">3</div>
+    <h2>每日详细行程</h2>
+    <div class="hint">橙色行 = 黄金时段<br>红色行 = 注意事项</div>
+  </div>
+
+  <!-- D1 -->
   <div class="day">
-    <h4>D1 · 9/30 周三 <span class="date">平果→途中 · 半程赶路</span></h4>
-    <ul class="tl">
-      <li><span class="t">13:00</span> 平果出发，G80广昆高速西行</li>
-      <li><span class="t">16:00</span> 过百色服务区加油+上厕所，第1次换驾驶员</li>
-      <li><span class="t">19:00</span> 过昆明附近，找个服务区或中途城市休息</li>
-      <li><span class="t">20:00</span> 建议在昆明/楚雄附近过夜休整</li>
+    <div class="day-h"><span class="dn">D1 · 9/30 周三</span><span class="dd2">平果 → 昆明方向</span><span class="dtag">约 620 km / 7h</span></div>
+    <div class="day-b">
+      <div class="row"><div class="tm">15:00</div><div class="ct"><b>平果出发</b><span class="note">满油出发，检查胎压、备胎、行车记录仪。走 G80 广昆高速。</span></div></div>
+      <div class="row"><div class="tm">18:30</div><div class="ct"><b>百色 / 富宁服务区</b><span class="note">换手 + 吃饭。5 人两班倒，每人开 2 小时轮换。</span></div></div>
+      <div class="row"><div class="tm">22:30</div><div class="ct"><b>砚山 / 丘北服务区宿车里</b><span class="note">找有热水、有厕所的大服务区过夜。SUV 放倒后排 + 充气垫，或扎帐篷。</span></div></div>
+      <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>国庆首日高速免费从 10/1 零点开始</b>9/30 上高速需领卡缴费，10/1 后下高速按免费处理。若想全程免费，可 9/30 晚 24:00 前在收费站附近等待。</div></div>
+    </div>
+  </div>
+
+  <!-- D2 -->
+  <div class="day">
+    <div class="day-h"><span class="dn">D2 · 10/1 周四</span><span class="dd2">抵达大理</span><span class="dtag">约 430 km / 5h</span></div>
+    <div class="day-b">
+      <div class="row"><div class="tm">07:30</div><div class="ct"><b>起床，服务区洗漱</b><span class="note">或开到大理后找钟点房洗澡（60–80 元/间，可 5 人轮流）。</span></div></div>
+      <div class="row"><div class="tm">08:00</div><div class="ct"><b>继续赶路 → 昆明绕城 → 楚大高速</b></div></div>
+      <div class="row"><div class="tm">13:00</div><div class="ct"><b>抵达大理，先找钟点房洗澡</b><span class="note">5 人开 1–2 间钟点房，洗漱休整后出发，精神状态完全不同。</span></div></div>
+      <div class="row"><div class="tm">15:00</div><div class="ct"><b>大理古城逛起来</b><span class="note">人民路、洋人街、复兴路、文献楼。古城免费，慢慢逛 3 小时足够。</span></div></div>
+      <div class="row g"><div class="tm">18:00</div><div class="ct"><b>古城傍晚光线最佳时段</b><span class="note">苍山做背景，五华楼、南城门是最佳机位。顺带吃晚餐。</span></div></div>
+      <div class="row"><div class="tm">21:00</div><div class="ct"><b>开车到洱海边停车场宿营</b><span class="note">推荐：才村码头 / 龙龛码头停车场（明早直接在日出点，省 1 小时车程）。</span></div></div>
+      <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>今晚必须停在龙龛或才村</b>明早 07:00 日出，住古城再开过来会错过晨光。</div></div>
+    </div>
+  </div>
+
+  <!-- D3 -->
+  <div class="day">
+    <div class="day-h gold"><span class="dn">D3 · 10/2 周五</span><span class="dd2">洱海环湖 ⭐ 全天重点</span><span class="dtag">约 130 km 环湖</span></div>
+    <div class="day-b">
+      <div class="row g"><div class="tm">06:30</div><div class="ct"><b>龙龛码头看日出</b><span class="note">⏰ 日出约 07:00。停车场走过去 5 分钟。逆光剪影 + 苍山十九峰。</span></div></div>
+      <div class="row g"><div class="tm">07:40</div><div class="ct"><b>磻溪村 S 弯（8 点前必到）</b><span class="note">⏰ 9 点后旅行团涌入、生态廊道禁机动车。这是洱海最出片的一个弯。</span></div></div>
+      <div class="row"><div class="tm">09:30</div><div class="ct"><b>喜洲古镇 + 稻田</b><span class="note">白族民居建筑群、严家大院。转角楼、稻田是网红机位。喜洲粑粑当早餐。</span></div></div>
+      <div class="row"><div class="tm">11:30</div><div class="ct"><b>海舌公园 / 双廊方向</b><span class="note">沿途随停随拍，洱海东岸视角看苍山全景。</span></div></div>
+      <div class="row"><div class="tm">14:00</div><div class="ct"><b>双廊古镇 + 南诏风情岛</b><span class="note">杨丽萍太阳宫、月亮宫外观。午后光线偏硬，适合逛店休息。</span></div></div>
+      <div class="row g"><div class="tm">17:30</div><div class="ct"><b>双廊日落（18:55 落日）</b><span class="note">⏰ 提前 1 小时占机位。玉几岛、海街是最佳观景点，太阳落进洱海。</span></div></div>
+      <div class="row"><div class="tm">19:30</div><div class="ct"><b>返回大理 / 直接开往丽江</b><span class="note">可选 A：回大理住（明早再走）；可选 B：夜驾到丽江（2.5h），省次日时间。建议 B。</span></div></div>
+      <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>大理 2 天够用，关键在早起</b>D2 下午 + D3 全天 = 1.5 天。只要 D3 07:00 前动身，古城 + 环湖 + 喜洲 + 双廊全都能走完。睡懒觉才会不够。</div></div>
+    </div>
+  </div>
+
+  <!-- D4 -->
+  <div class="day">
+    <div class="day-h"><span class="dn">D4 · 10/3 周六</span><span class="dd2">大理 → 丽江</span><span class="dtag">180 km / 2.5h</span></div>
+    <div class="day-b">
+      <div class="row"><div class="tm">08:30</div><div class="ct"><b>大理出发 → 大丽高速</b><span class="note">若 D3 晚已到丽江，这天白赚，可睡到自然醒或加游沙溪古镇。</span></div></div>
+      <div class="row"><div class="tm">11:00</div><div class="ct"><b>抵达丽江，钟点房洗澡</b></div></div>
+      <div class="row"><div class="tm">13:00</div><div class="ct"><b>黑龙潭公园（远眺玉龙雪山倒影）</b><span class="note">免费 / 古城维护费已取消。得月楼 + 雪山倒影是经典机位，明天踩点。</span></div></div>
+      <div class="row"><div class="tm">16:00</div><div class="ct"><b>束河古镇（比大研古城安静）</b><span class="note">青龙桥、九鼎龙潭。人流比丽江古城少一半，适合慢慢逛。</span></div></div>
+      <div class="row g"><div class="tm">20:00</div><div class="ct"><b>丽江古城夜景</b><span class="note">⏰ 20:00 后红灯笼全亮。四方街、大水车、狮子山万古楼俯拍全城。</span></div></div>
+      <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>今晚 20:00 抢明天的玉龙雪山大索道票！</b>详见下方「关键时间线」。这是全行程最致命的一个节点。</div></div>
+    </div>
+  </div>
+
+  <!-- D5 -->
+  <div class="day">
+    <div class="day-h gold"><span class="dn">D5 · 10/4 周日</span><span class="dd2">玉龙雪山 ⭐ 最关键的一天</span><span class="dtag">日出 07:13</span></div>
+    <div class="day-b">
+      <div class="row g"><div class="tm">05:40</div><div class="ct"><b>起床出发（全行程最早的一次）</b><span class="note">⏰ 必须 05:40 出门。丽江古城 → 甘海子约 45 分钟车程。</span></div></div>
+      <div class="row g"><div class="tm">06:40</div><div class="ct"><b>甘海子占位，等日照金山</b><span class="note">⏰ <b>日出 07:13:31</b>，金色覆盖峰顶仅 15–20 分钟，07:35 后变白雪山。<b>10 月是黄金季第一月</b>，云层薄，看到概率高。</span></div></div>
+      <div class="row g"><div class="tm">07:40</div><div class="ct"><b>看完金山 → 游客中心取索道票</b><span class="note">提前网上订好，凭身份证 + 学生证 / 退伍证取票。</span></div></div>
+      <div class="row"><div class="tm">08:30</div><div class="ct"><b>大索道上冰川公园（4506 m）</b><span class="note">索道 20 分钟，上升 1,200 m。栈道走到 4680 m 观景台，慢走防高反。氧气瓶山下买（25 元），山上翻倍。</span></div></div>
+      <div class="row"><div class="tm">11:00</div><div class="ct"><b>蓝月谷（正午最蓝）</b><span class="note">⏰ 11:00–14:00 直射光下湖水呈乳蓝色。玉液湖、镜潭湖、蓝月湖、听涛湖四级叠水。</span></div></div>
+      <div class="row"><div class="tm">14:30</div><div class="ct"><b>《印象丽江》实景演出（可选）</b><span class="note">张艺谋导演，雪山做背景。票价约 190 元/人，学生可能有优惠，现场问。</span></div></div>
+      <div class="row"><div class="tm">17:00</div><div class="ct"><b>返回丽江，休整</b><span class="note">今天强度最大，晚上早点睡。明早要开长途。</span></div></div>
+      <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>高反预案</b>老大十几年前有过高反史。4680 m 不是开玩笑：① 提前 3 天不剧烈运动；② 山下买氧气瓶（2 罐/人）；③ 感觉头痛立即下撤，不要硬撑；④ 退伍军人/学生索道票提前问清窗口。</div></div>
+    </div>
+  </div>
+
+  <!-- D6 -->
+  <div class="day">
+    <div class="day-h"><span class="dn">D6 · 10/5 周一</span><span class="dd2">丽江 → 虎跳峡 → 香格里拉</span><span class="dtag">200 km / 4h</span></div>
+    <div class="day-b">
+      <div class="row"><div class="tm">08:00</div><div class="ct"><b>丽江出发 → 香格里拉方向（G214）</b></div></div>
+      <div class="row g"><div class="tm">10:30</div><div class="ct"><b>虎跳峡 · 上虎跳</b><span class="note">⏰ 10:30–13:00 阳光照进峡谷，江水呈金沙色。下到江边栈道约 200 级台阶，往返 1 小时。</span></div></div>
+      <div class="row"><div class="tm">13:00</div><div class="ct"><b>途经小中甸花海 / 彝族村寨</b><span class="note">10 月是狼毒花变红的季节，草原一片火红。</span></div></div>
+      <div class="row"><div class="tm">16:00</div><div class="ct"><b>抵达香格里拉（海拔 3,300 m）</b><span class="note">钟点房洗澡休整。今天不要剧烈运动，适应高原。</span></div></div>
+      <div class="row g"><div class="tm">18:00</div><div class="ct"><b>独克宗古城 · 转经筒</b><span class="note">⏰ 傍晚金色斜光打在金顶和白墙。龟山大佛寺可俯拍古城。世界上最大的转经筒，需 5–6 人合力转动。</span></div></div>
+      <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>香格里拉海拔 3,300 m</b>今晚别洗澡太热太久、别喝酒、别跑跳。头疼是正常适应反应，睡一觉就好。</div></div>
+    </div>
+  </div>
+
+  <!-- D7 -->
+  <div class="day">
+    <div class="day-h gold"><span class="dn">D7 · 10/6 周二</span><span class="dd2">松赞林寺 + 普达措</span><span class="dtag">香格里拉</span></div>
+    <div class="day-b">
+      <div class="row g"><div class="tm">07:30</div><div class="ct"><b>松赞林寺看晨雾金顶</b><span class="note">⏰ <b>已改到早上</b>（原计划下午去）。07:30–09:00 山谷起雾，阳光斜打金顶，拉姆央措湖有完美倒影。10 点后雾散发灰。</span></div></div>
+      <div class="row"><div class="tm">10:00</div><div class="ct"><b>普达措国家公园</b><span class="note">⏰ 09:00–13:00 最佳。属都湖 + 碧塔海，全程观光车 + 栈道徒步约 4 小时。高原湖泊 + 原始森林 + 牦牛。</span></div></div>
+      <div class="row"><div class="tm">16:00</div><div class="ct"><b>纳帕海依拉草原</b><span class="note">季节性湖泊，10 月水草丰美。环湖公路自驾一圈，看黑颈鹤、牛羊群。</span></div></div>
+      <div class="row g"><div class="tm">18:00</div><div class="ct"><b>纳帕海草原日落</b><span class="note">开阔草原无遮挡，日落时整个天空烧起来，是香格里拉最好的黄昏机位。</span></div></div>
+      <div class="row"><div class="tm">20:00</div><div class="ct"><b>休整 + 准备返程</b><span class="note">这是最后一个完整游玩日。检查车况、加满油。</span></div></div>
+    </div>
+  </div>
+
+  <!-- D8 -->
+  <div class="day">
+    <div class="day-h"><span class="dn">D8 · 10/7 周三</span><span class="dd2">香格里拉 → 平果（返程）</span><span class="dtag">约 1,300 km</span></div>
+    <div class="day-b">
+      <div class="row"><div class="tm">08:00</div><div class="ct"><b>方案 A：一整天开回去</b><span class="note">1,300 km / 约 15h。两人轮换，早 8 点出发 → 晚 23 点到。强度极大，不推荐。</span></div></div>
+      <div class="row"><div class="tm">08:00</div><div class="ct"><b>方案 B：开到昆明住一晚 ⭐ 推荐</b><span class="note">香格里拉 → 昆明约 700 km / 8h。10/7 晚住昆明（青旅/标间，国庆约 200 元/间），10/8 早上再开 500 km 回平果。<b>安全得多，且 10/8 高速仍免费（免费期到 10/8 24:00）</b>。</span></div></div>
+      <div class="row"><div class="tm">08:00</div><div class="ct"><b>方案 C：中途服务区过夜</b><span class="note">和去程一样宿车里，10/8 中午到家。最省钱但最累。</span></div></div>
+      <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>国庆高速免费期：10/1 00:00 – 10/8 24:00</b>方案 B 和 C 都在免费期内，过路费全省。方案 A 也在期内，但一天开 1,300 km 太危险。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. 费用明细 ============ -->
+<section>
+  <div class="sec-h">
+    <div class="no">4</div>
+    <h2>费用明细（5 人合计）</h2>
+    <div class="hint">不含餐饮<br>住宿费 ≈ 0</div>
+  </div>
+
+  <div class="card">
+    <table class="ftable">
+      <thead>
+        <tr><th>项目</th><th style="width:32%">说明</th><th style="text-align:right">金额</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>油费</b></td>
+          <td style="font-size:12.5px;color:var(--gray)">2,800 km ÷ 100 × 8L × ¥7.5/L<span class="sub">SUV/MPV 满载综合油耗</span></td>
+          <td class="num">¥1,680</td>
+        </tr>
+        <tr>
+          <td><b>过路费</b></td>
+          <td style="font-size:12.5px;color:var(--gray)">约 2,800 km × ¥0.45/km<span class="sub">去程 9/30 段需缴费，其余国庆免费</span></td>
+          <td class="num">¥1,260</td>
+        </tr>
+        <tr class="cut">
+          <td><b>门票</b></td>
+          <td style="font-size:12.5px;color:var(--gray)">4 学生票 + 1 退伍军人免票<span class="sub">原价 ¥2,565 → 实付 ¥1,404，省 ¥1,161</span></td>
+          <td class="num" style="color:var(--green)">¥1,404</td>
+        </tr>
+        <tr>
+          <td><b>钟点房洗澡</b></td>
+          <td style="font-size:12.5px;color:var(--gray)">6 次 × ¥60 × 1 间<span class="sub">5 人轮流洗，1 间足够</span></td>
+          <td class="num">¥360</td>
+        </tr>
+        <tr>
+          <td><b>停车费 / 杂项</b></td>
+          <td style="font-size:12.5px;color:var(--gray)">景区停车、洗车、高速备用金</td>
+          <td class="num">¥200</td>
+        </tr>
+        <tr>
+          <td><b>装备补充</b></td>
+          <td style="font-size:12.5px;color:var(--gray)">氧气瓶、充气垫、睡袋、车用逆变器<span class="sub">已有装备可省</span></td>
+          <td class="num">¥300</td>
+        </tr>
+        <tr class="sum">
+          <td>合计</td>
+          <td style="font-size:12.5px;color:var(--gray);font-weight:400">5 人 8 天，不含餐饮</td>
+          <td class="num">¥5,204</td>
+        </tr>
+        <tr class="sum">
+          <td>人均</td>
+          <td></td>
+          <td class="num">¥1,041</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 5. 门票优惠明细 ============ -->
+<section>
+  <div class="sec-h">
+    <div class="no">5</div>
+    <h2>门票优惠明细</h2>
+    <div class="hint">4 学生 + 1 退伍军人<br>共省 ¥1,161</div>
+  </div>
+
+  <div class="card">
+    <table class="tk">
+      <thead>
+        <tr>
+          <th style="width:22%">景区</th><th style="text-align:right">原价</th><th style="text-align:right">学生</th><th style="text-align:right">退伍军人</th><th style="text-align:right">5 人实付</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>玉龙雪山</b><span style="display:block;font-size:11px;color:var(--gray)">进山费 100 + 大索道 120</span></td>
+          <td class="num old">¥220/人</td>
+          <td class="num">进山 50<br>索道 120</td>
+          <td class="num new">进山免<br>索道 60</td>
+          <td class="num new">¥740</td>
+        </tr>
+        <tr>
+          <td><b>虎跳峡</b><span style="display:block;font-size:11px;color:var(--gray)">上虎跳</span></td>
+          <td class="num old">¥65/人</td>
+          <td class="num">¥32</td>
+          <td class="num new">免</td>
+          <td class="num new">¥128</td>
+        </tr>
+        <tr>
+          <td><b>普达措</b><span style="display:block;font-size:11px;color:var(--gray)">门票 + 观光车</span></td>
+          <td class="num old">¥138/人</td>
+          <td class="num">¥69</td>
+          <td class="num new">免门票<br>车费 ¥60</td>
+          <td class="num new">¥336</td>
+        </tr>
+        <tr>
+          <td><b>松赞林寺</b><span style="display:block;font-size:11px;color:var(--gray)">门票 + 观光车</span></td>
+          <td class="num old">¥90/人</td>
+          <td class="num">¥45</td>
+          <td class="num new">免门票<br>车费 ¥20</td>
+          <td class="num new">¥200</td>
+        </tr>
+        <tr>
+          <td><b>大理古城 / 丽江古城</b></td>
+          <td class="num">免费</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">¥0</td>
+        </tr>
+        <tr class="sum">
+          <td>合计</td>
+          <td class="num old">¥2,565</td>
+          <td class="num" colspan="2">优惠后</td>
+          <td class="num">¥1,404</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="padding:11px 14px;font-size:12.5px;color:var(--gray);background:#fafcfd;border-top:1px solid var(--line);line-height:1.75">
+      <b style="color:var(--ink)">注意事项：</b>学生票需带<b>本人学生证</b>（研究生证部分景区不认）；退伍军人需带<b>优待证</b>，多数云南景区对退役军人<b>免首道门票</b>，但观光车/索道/电瓶车通常不免或半价。玉龙雪山大索道需<b>提前 7 天网上抢票</b>。以上为 2025 年政策参考，出发前请二次确认。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. 自驾 vs 动车 ============ -->
+<section>
+  <div class="sec-h">
+    <div class="no">6</div>
+    <h2>自驾 vs 动车 对比</h2>
+    <div class="hint">5 人同口径<br>均不含餐饮</div>
+  </div>
+
+  <div class="cmp">
+    <div class="cbox win">
+      <div class="cbox-h">🚗 自驾（推荐）</div>
+      <div class="cbox-b">
+        <div class="cline"><span class="lb">油费 + 过路费</span><span class="vl">¥2,940</span></div>
+        <div class="cline"><span class="lb">门票（含优惠）</span><span class="vl">¥1,404</span></div>
+        <div class="cline"><span class="lb">住宿（车里/帐篷）</span><span class="vl">¥0</span></div>
+        <div class="cline"><span class="lb">钟点房洗澡</span><span class="vl">¥360</span></div>
+        <div class="cline"><span class="lb">杂项 + 装备</span><span class="vl">¥500</span></div>
+        <div class="tot"><span class="lb">合计</span><span class="vl">¥5,204</span></div>
+        <div class="pp">人均 <b>¥1,041</b></div>
+      </div>
+    </div>
+
+    <div class="cbox">
+      <div class="cbox-h">🚄 动车 + 当地交通</div>
+      <div class="cbox-b">
+        <div class="cline"><span class="lb">往返车票</span><span class="vl">¥3,780</span></div>
+        <div class="cline"><span class="lb">门票（含优惠）</span><span class="vl">¥1,404</span></div>
+        <div class="cline"><span class="lb">住宿 7 晚（国庆）</span><span class="vl">¥4,200</span></div>
+        <div class="cline"><span class="lb">当地包车/大巴</span><span class="vl">¥1,500</span></div>
+        <div class="cline"><span class="lb">杂项</span><span class="vl">¥300</span></div>
+        <div class="tot"><span class="lb">合计</span><span class="vl">¥11,184</span></div>
+        <div class="pp">人均 <b>¥2,237</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px;padding:13px 15px">
+    <div style="font-size:13.5px;line-height:1.85">
+      <b>结论：自驾省 ¥5,980（人均省 ¥1,196），且自由度碾压。</b><br>
+      <span style="color:var(--gray);font-size:12.5px">
+      ① <b>车票口径：</b>平果/百色 → 大理需经昆明南中转，二等座单程约 <b>¥335 – ¥378</b>（老大自己查到 378，以 12306 实际为准），往返 × 5 人 = ¥3,780。<br>
+      ② <b>动车方案最大痛点是住宿</b>：国庆期间大理/丽江标间普遍 ¥300–500/晚且一房难求，5 人 7 晚至少 3 间房 → ¥4,200 起步，这一项就抵掉自驾全部油费过路费。<br>
+      ③ <b>自驾的隐性优势</b>：凌晨 5:40 出发追日照金山、清晨 7 点卡 S 弯——这些黄金时段只有自驾能做到，动车方案全部要放弃或打车。<br>
+      ④ <b>自驾的代价</b>：2,800 km 长途驾驶疲劳，必须 2 人以上轮换；需要有 C 照以上驾照且无重大事故记录。
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. 装备清单 ============ -->
+<section>
+  <div class="sec-h">
+    <div class="no">7</div>
+    <h2>住宿方案 + 装备清单</h2>
+    <div class="hint">睡车里 / 帐篷<br>钟点房洗澡</div>
+  </div>
+
+  <div class="card" style="padding:13px 15px;margin-bottom:12px">
+    <div style="font-size:13.5px;line-height:1.85">
+      <b style="color:var(--blue)">住宿方案：住宿费清零</b><br>
+      <span style="color:var(--gray);font-size:12.5px">
+      · <b>主方案 — 睡车里</b>：SUV/MPV 放倒第二三排 + 充气床垫，平躺 2 人；前排座椅放倒 1 人；其余扎帐篷。车窗留 2 cm 通风缝（防结露 + 防一氧化碳）。<br>
+      · <b>备选 — 帐篷</b>：选有热水的<b>大型高速服务区</b>或<b>景区停车场</b>扎营，避开国道边和无人区。10 月滇西北夜间气温 <b>3–8 ℃</b>，必须 -5 ℃ 温标睡袋。<br>
+      · <b>洗澡 — 钟点房</b>：大理、丽江、香格里拉三地各安排 1–2 次，¥60–80/间，5 人轮流洗 1 间即可。<b>提前在美团搜「钟点房」看评价，选古城附近的。</b><br>
+      · <b>高原特别注意</b>：香格里拉（3,300 m）首夜<b>不要洗热水澡太久</b>，容易引发高反。
+      </span>
+    </div>
+  </div>
+
+  <div class="eq">
+    <div class="eqbox">
+      <h4>🚗 车辆必带</h4>
+      <ul>
+        <li>备胎 + 千斤顶 + 扳手</li>
+        <li>拖车绳、搭电线</li>
+        <li>行车记录仪（<b>防碰瓷</b>）</li>
+        <li>车载逆变器（220V 供电）</li>
+        <li>手机支架 + 快充线</li>
+        <li>玻璃水、机油备一点</li>
+        <li>ETC（<b>国庆免费也要装</b>）</li>
+      </ul>
+    </div>
+    <div class="eqbox">
+      <h4>⛺ 露营装备</h4>
+      <ul>
+        <li>充气床垫 + 车载充气泵</li>
+        <li>-5 ℃ 睡袋（<b>高原必需</b>）</li>
+        <li>帐篷 + 防潮垫</li>
+        <li>遮光挡（<b>隐私 + 保暖</b>）</li>
+        <li>头灯 / 营地灯</li>
+        <li>折叠桌椅、卡式炉</li>
+        <li>垃圾袋、湿纸巾</li>
+      </ul>
+    </div>
+    <div class="eqbox">
+      <h4>🏔️ 高原防护</h4>
+      <ul>
+        <li>氧气瓶 <b>2 罐/人</b>（山下买 25 元）</li>
+        <li>红景天（提前 3 天吃）</li>
+        <li>高原安 / 布洛芬</li>
+        <li>防晒霜 SPF50+ （<b>紫外线极强</b>）</li>
+        <li>唇膏、润肤乳</li>
+        <li>墨镜（雪地/高原）</li>
+        <li>保温杯（热水随时有）</li>
+      </ul>
+    </div>
+    <div class="eqbox">
+      <h4>👕 衣物（10 月）</h4>
+      <ul>
+        <li>冲锋衣 / 薄羽绒（<b>早晚 3–8 ℃</b>）</li>
+        <li>抓绒内胆、保暖裤</li>
+        <li>短袖（正午 20 ℃ 可穿）</li>
+        <li>舒适徒步鞋（<b>虎跳峡 200 级台阶</b>）</li>
+        <li>帽子、手套（雪山 4680 m）</li>
+        <li>一次性内衣裤</li>
+        <li>拖鞋（钟点房洗澡用）</li>
+      </ul>
+    </div>
+    <div class="eqbox">
+      <h4>📄 证件（<b>优惠全靠它</b>）</h4>
+      <ul>
+        <li><b>身份证</b> ×5</li>
+        <li><b>学生证</b> ×4（本人！）</li>
+        <li><b>退伍军人优待证</b> ×1</li>
+        <li>驾驶证 + 行驶证</li>
+        <li>车辆保险单（电子版）</li>
+        <li>银行卡 / 少量现金</li>
+        <li>医保电子凭证</li>
+      </ul>
+    </div>
+    <div class="eqbox">
+      <h4>📷 拍照 / 电子</h4>
+      <ul>
+        <li>相机 + 备用电池（<b>低温掉电快</b>）</li>
+        <li>充电宝 2 万毫安 ×2</li>
+        <li>三脚架（<b>日出日落必用</b>）</li>
+        <li>手机防水袋</li>
+        <li>存储卡 / 数据线</li>
+        <li>离线地图（<b>山区无信号</b>）</li>
+        <li>车载音乐歌单</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. 关键时间线 ============ -->
+<section>
+  <div class="sec-h">
+    <div class="no">8</div>
+    <h2>关键时间线（别错过）</h2>
+    <div class="hint">红色 = 错过就没了</div>
+  </div>
+
+  <div class="tl">
+    <div class="tlrow urgent">
+      <div class="tld">9/27 20:00</div>
+      <div class="tlc"><b>抢玉龙雪山大索道票（10/4 场次）</b><span>「丽江旅游集团」微信小程序，<b>提前 7 天、每晚 20:00 放票</b>，日限 1 万张。国庆场通常 <b>3–5 分钟售罄</b>。务必 19:55 就进小程序等着，提前填好全部乘车人信息。</span></div>
+    </div>
+    <div class="tlrow urgent">
+      <div class="tld">9/29 前</div>
+      <div class="tlc"><b>车辆保养 + 检查</b><span>机油、刹车片、轮胎磨损、胎压、冷却液、雨刮。跑 2,800 km 的长途，出发前不检查是最常见的翻车原因。</span></div>
+    </div>
+    <div class="tlrow warn">
+      <div class="tld">9/29 前</div>
+      <div class="tlc"><b>确认证件 + 预约钟点房</b><span>4 本学生证（本人、在有效期内）+ 1 本退伍军人优待证，拍照存手机备份。美团提前看好大理/丽江/香格里拉的钟点房。</span></div>
+    </div>
+    <div class="tlrow warn">
+      <div class="tld">9/28 – 9/30</div>
+      <div class="tlc"><b>开始吃红景天</b><span>提前 3 天服用，到高原时血液携氧能力更好。同时这 3 天别熬夜、别剧烈运动。</span></div>
+    </div>
+    <div class="tlrow">
+      <div class="tld">10/1 00:00</div>
+      <div class="tlc"><b>高速免费期开始</b><span>免费期 <b>10/1 00:00 – 10/8 24:00</b>，以驶离高速时间为准。9/30 上高速需领卡，10/1 后下高速自动免费。</span></div>
+    </div>
+    <div class="tlrow urgent">
+      <div class="tld">10/3 20:00</div>
+      <div class="tlc"><b>备用：再抢一次索道票</b><span>若 9/27 没抢到，每天 20:00 都会放次日及后续余票（退票回流）。<b>坚持刷到 10/3 晚上</b>。</span></div>
+    </div>
+    <div class="tlrow urgent">
+      <div class="tld">10/4 05:40</div>
+      <div class="tlc"><b>⏰ 起床出发追日照金山</b><span><b>全行程最不能睡过头的一次。</b>日出 07:13:31，金色只有 15–20 分钟。设 3 个闹钟。</span></div>
+    </div>
+    <div class="tlrow">
+      <div class="tld">10/8 24:00</div>
+      <div class="tlc"><b>高速免费期结束</b><span>若按方案 B（10/8 从昆明回平果），仍在免费期内，记得在 24:00 前驶离高速。</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. 风险提示 ============ -->
+<section>
+  <div class="sec-h">
+    <div class="no">9</div>
+    <h2>风险提示</h2>
+  </div>
+
+  <div class="risk">
+    <div class="risk-h">⚠️ 出发前必须想清楚的 6 件事</div>
+    <ul>
+      <li><b>高反是真实存在的风险。</b>玉龙雪山 4680 m、香格里拉 3,300 m。老大十几年前有高反史，虽已成年但也别掉以轻心。氧气瓶、红景天必带，感觉头痛恶心立即下撤，<b>不要硬撑</b>。</li>
+      <li><b>玉龙雪山大索道可能抢不到票。</b>国庆日限 1 万张，秒空是常态。抢不到就改去<b>云杉坪索道</b>（海拔 3,240 m，票多、也有雪山观景），或改去<b>拉市海</b>。别把 D5 全押在索道上。</li>
+      <li><b>2,800 km 长途驾驶，必须有 2 人以上轮换。</b>一人开全程是拿命赌博。每 2 小时换手，每 4 小时进服务区活动 15 分钟。</li>
+      <li><b>睡车里要注意一氧化碳和保暖。</b>车里不开空调时不要长时间怠速（尾气倒灌风险）；车窗必须留缝通风；10 月滇西北夜间 3–8 ℃，睡袋温标不够会失温。</li>
+      <li><b>国庆人流量是本攻略最大的变量。</b>黄金时段的安排（早上 7–9 点、傍晚 17–19 点）本身就是为了避开人流，但热门景点仍可能堵车。每天预留 1 小时缓冲时间。</li>
+      <li><b>费用为估算值。</b>油价、门票政策、钟点房价格都可能变动，实际支出可能有 ±15% 偏差。<b>建议每人额外备 500 元应急金。</b></li>
     </ul>
-    <div class="sleep-box">⛺ <b>住宿</b>：昆明或楚雄附近服务区/城市停车过夜。夜间昆明15-20℃，车里/帐篷都舒适。明天只需开4-5h到大理，轻松。</div>
-    <div class="ok">✅ <b>9/30出发的妙处</b>：①避开10/1早上的堵车高峰；②9/30高速还没免费但也不贵，晚上跑了一段省时间；③10/1只需半天到大理，下午就能玩。</div>
   </div>
-
-  <div class="day d2">
-    <h4>D2 · 10/1 周四 <span class="date">途中→大理 · 约450km</span></h4>
-    <ul class="tl">
-      <li><span class="t">08:00</span> 昆明/楚雄出发，G56杭瑞高速向大理</li>
-      <li><span class="t">09:00</span> ⚠️ 10/1 0:00起高速已免费！</li>
-      <li><span class="t">12:00</span> 到达大理！先去洱海东线看日落</li>
-      <li><span class="t">14:00</span> 大理古城吃午饭（酸辣鱼+烤乳扇）</li>
-      <li><span class="t">16:00</span> 逛大理古城：人民路→洋人街→五华楼</li>
-      <li><span class="t">19:00</span> 古城吃晚饭，逛夜市</li>
-    </ul>
-    <div class="sleep-box">🚿 <b>钟点房</b>：大理古城青旅钟点房约20-40元/4小时，洗澡休整。</div>
-    <div class="sleep-box">⛺ <b>住宿</b>：大理古城附近或洱海边停车过夜。夜间10-15℃，车里/帐篷均可。找免费停车场或洱海生态廊道旁停车点。</div>
-  </div>
-
-  <div class="day d3">
-    <h4>D3 · 10/2 周五 <span class="date">大理·环洱海一日</span></h4>
-    <ul class="tl">
-      <li><span class="t">09:00</span> 大理古城逛早市，吃一碗巍山粑肉饵丝</li>
-      <li><span class="t">10:30</span> 自驾环洱海西线：古城→磻溪S弯→喜洲古镇（免费）</li>
-      <li><span class="t">12:30</span> 喜洲吃喜洲粑粑+午饭，逛稻田拍照</li>
-      <li><span class="t">14:00</span> 继续环海：喜洲→双廊古镇（免费）→海东看洱海日落</li>
-      <li><span class="t">18:00</span> 回大理古城吃晚饭</li>
-      <li><span class="t">20:00</span> 古城夜逛，找钟点房洗澡 🚿</li>
-    </ul>
-    <div class="sleep-box">🚿 <b>钟点房</b>：大理古城青旅钟点房约20-40元/4小时，5人开一间够洗澡。美团/携程搜"钟点房"。</div>
-    <div class="sleep-box">⛺ <b>住宿</b>：继续大理过夜。洱海生态廊道旁有免费停车点，适合车里/帐篷。</div>
-  </div>
-
-  <div class="day d4">
-    <h4>D4 · 10/3 周六 <span class="date">大理→丽江 · 180km</span></h4>
-    <ul class="tl">
-      <li><span class="t">09:00</span> 大理出发，大丽高速2.5h到丽江</li>
-      <li><span class="t">12:00</span> 到丽江，先去停车场放行李，吃午饭</li>
-      <li><span class="t">14:00</span> 丽江古城（免费）：大水车→四方街→木府（40元/人，学生20/退伍军人免，可选）</li>
-      <li><span class="t">16:30</span> 狮子山万古楼俯瞰古城全景（免费）</li>
-      <li><span class="t">18:00</span> 丽江古城吃腊排骨火锅</li>
-      <li><span class="t">20:00</span> 古城夜景+酒吧街感受纳西风情</li>
-    </ul>
-    <div class="sleep-box">⛺ <b>住宿</b>：丽江古城周边停车场过夜。夜间5-12℃，需厚睡袋/被子。丽江海拔2400m。</div>
-  </div>
-
-  <div class="day d5">
-    <h4>D5 · 10/4 周日 <span class="date">玉龙雪山+蓝月谷</span></h4>
-    <ul class="tl">
-      <li><span class="t">06:30</span> 早起出发玉龙雪山（丽江→雪山40分钟车程）</li>
-      <li><span class="t">07:30</span> 到达甘海子游客中心，排队上大索道</li>
-      <li><span class="t">08:30</span> 大索道上冰川公园4506m→徒步至4680m观景台</li>
-      <li><span class="t">11:00</span> 下山→蓝月谷（免费，雪山融水蒂芙尼蓝湖面）</li>
-      <li><span class="t">14:00</span> 蓝月谷步行约1.5h，拍照出片</li>
-      <li><span class="t">16:00</span> 返回丽江，休息+吃饭</li>
-    </ul>
-    <div class="danger">🔥 <b>大索道票抢票提醒</b>：9月27日晚20:00在"丽江旅游集团"小程序抢10/4的大索道票（120元/人，退伍军人半价60元），日限1万张，秒没！设闹钟！门票100元（学生50/退伍军人免）+环保车20元（无优惠）另购。</div>
-    <div class="warn">⚠️ 雪山顶4680m海拔，备氧气瓶（山下20元/瓶，山上80元）。别剧烈运动，慢慢走。高反史是十几年前的，现在长大了不用太担心，但氧气瓶还是备着。</div>
-    <div class="sleep-box">🚿 <b>钟点房</b>：丽江古城钟点房约49元/2小时，5人开一间洗澡。</div>
-    <div class="sleep-box">⛺ <b>住宿</b>：继续丽江过夜。</div>
-  </div>
-
-  <div class="day d6">
-    <h4>D6 · 10/5 周一 <span class="date">丽江→虎跳峡→香格里拉</span></h4>
-    <ul class="tl">
-      <li><span class="t">08:00</span> 丽江出发，G214国道向香格里拉方向</li>
-      <li><span class="t">10:00</span> 到达虎跳峡景区（门票45元/人，学生22/退伍军人免），徒步上虎跳峡约2-3h</li>
-      <li><span class="t">13:00</span> 虎跳峡镇吃午饭（金沙江鱼）</li>
-      <li><span class="t">14:30</span> 继续G214→香格里拉，约2.5h</li>
-      <li><span class="t">17:00</span> 到达香格里拉，独克宗古城（免费）转经筒</li>
-      <li><span class="t">19:00</span> 吃牦牛肉火锅，感受藏族风情</li>
-    </ul>
-    <div class="danger">❄️ <b>香格里拉夜间0-5℃！</b>海拔3300m，夜间极冷。睡车里/帐篷风险较高，强烈建议这天住一晚青旅（床位80-120元/人），或开钟点房凑合一晚。5人住青旅约400-600元，保暖比省钱重要。</div>
-  </div>
-
-  <div class="day d7">
-    <h4>D7 · 10/6 周二 <span class="date">普达措+松赞林寺→返丽江</span></h4>
-    <ul class="tl">
-      <li><span class="t">08:00</span> 香格里拉出发→普达措国家公园（30分钟车程）</li>
-      <li><span class="t">09:00</span> 普达措：属都湖+碧塔海，全程木栈道约3.5km（门票138元/人，学生69/退伍军人免）</li>
-      <li><span class="t">13:00</span> 午饭后→松赞林寺（55元/人，学生27/退伍军人免，"小布达拉宫"）</li>
-      <li><span class="t">15:30</span> 香格里拉出发返丽江，180km/2.5h</li>
-      <li><span class="t">18:00</span> 回到丽江，吃晚饭休息</li>
-    </ul>
-    <div class="warn">⚠️ 普达措海拔3500-4000m，全程木栈道平缓，但建议携带氧气瓶。松赞林寺需脱帽、不穿短裤短裙。</div>
-    <div class="sleep-box">🚿 <b>钟点房</b>：丽江钟点房洗澡。</div>
-    <div class="sleep-box">⛺ <b>住宿</b>：回丽江过夜（比香格里拉暖和），丽江海拔2400m夜间5-12℃。</div>
-  </div>
-
-  <div class="day d7">
-    <h4>D8 · 10/7 周三 <span class="date">丽江→平果 · 1156km</span></h4>
-    <ul class="tl">
-      <li><span class="t">05:00</span> 丽江出发！赶在10/7 24:00前下高速（免费截止）</li>
-      <li><span class="t">08:00</span> 过大理，第1次换驾驶员</li>
-      <li><span class="t">11:00</span> 过昆明，第2次换驾驶员</li>
-      <li><span class="t">14:00</span> 过百色，第3次换驾驶员</li>
-      <li><span class="t">18:00</span> 到达平果！全程约13小时</li>
-    </ul>
-    <div class="danger">⚠️ <b>返程三大风险</b>：①10/7是返程最高峰，G56杭瑞高速大理-昆明段必堵，凌晨出发是唯一解；②必须在10/7 24:00前下高速，否则过路费全收（约600元）；③连续驾驶13小时，3本驾照轮换每3-4小时换人，切勿疲劳驾驶。</div>
-  </div>
-</div>
-
-<!-- ============ 门票汇总 ============ -->
-<div class="card">
-  <h2>🎫 门票费用明细（5人：4学生+1退伍军人）</h2>
-  <div class="ok">🎖️ <b>优惠大省！</b>退伍军人持优待证→多数景区<b>免票</b>；学生持学生证→多数景区<b>半价</b>。证件原件必带！</div>
-  <table>
-    <tr><th>景点</th><th>全价</th><th>学生价</th><th>退伍军人</th><th>5人合计(4学生+1老兵)</th><th>备注</th></tr>
-    <tr><td>洱海环湖</td><td class="free">免费</td><td class="free">免费</td><td class="free">免费</td><td class="free">0元</td><td>自驾无门票</td></tr>
-    <tr><td>大理古城</td><td class="free">免费</td><td class="free">免费</td><td class="free">免费</td><td class="free">0元</td><td>全天开放</td></tr>
-    <tr><td>喜洲/双廊</td><td class="free">免费</td><td class="free">免费</td><td class="free">免费</td><td class="free">0元</td><td>古镇免费</td></tr>
-    <tr><td>丽江古城</td><td class="free">免费</td><td class="free">免费</td><td class="free">免费</td><td class="free">0元</td><td>无维护费</td></tr>
-    <tr><td>木府</td><td>40元</td><td class="good">20元</td><td class="good">免票</td><td>80元</td><td class="che">可选</td></tr>
-    <tr><td>玉龙雪山门票</td><td>100元</td><td class="good">50元</td><td class="good">免票</td><td>200元</td><td class="pay">必买</td></tr>
-    <tr><td>玉龙雪山环保车</td><td>20元</td><td>20元</td><td>20元</td><td>100元</td><td class="pay">无优惠·必买</td></tr>
-    <tr><td>玉龙雪山大索道</td><td>120元</td><td>120元</td><td class="good">60元</td><td>540元</td><td class="pay">必抢！9/27晚20:00</td></tr>
-    <tr><td>蓝月谷</td><td class="free">免费</td><td class="free">免费</td><td class="free">免费</td><td class="free">0元</td><td>含在雪山内</td></tr>
-    <tr><td>虎跳峡</td><td>45元</td><td class="good">~22元</td><td class="good">免票</td><td>~90元</td><td class="pay">必买</td></tr>
-    <tr><td>独克宗古城</td><td class="free">免费</td><td class="free">免费</td><td class="free">免费</td><td class="free">0元</td><td>转经筒免费</td></tr>
-    <tr><td>普达措</td><td>138元</td><td class="good">~69元</td><td class="good">免票</td><td>~276元</td><td class="pay">含观光车</td></tr>
-    <tr><td>松赞林寺</td><td>55元</td><td class="good">~27元</td><td class="good">免票</td><td>~110元</td><td class="che">可选</td></tr>
-    <tr style="background:#eaf2fa"><td><b>合计</b></td><td></td><td></td><td></td><td class="good"><b>~1316元</b></td><td>不含木府</td></tr>
-    <tr style="background:#eaf2fa"><td><b>含木府</b></td><td></td><td></td><td></td><td class="good"><b>~1396元</b></td><td>含可选木府</td></tr>
-  </table>
-  
-  <div class="save">💰 <b>优惠省了多少</b>：全价5人约2690元 → 学生+退伍军人优惠后约1316元，<b>直接省了1374元！</b></div>
-  
-  <h3>📜 各景区优惠政策依据</h3>
-  <table>
-    <tr><th>景区</th><th>学生优惠</th><th>退伍军人优惠</th><th>证件要求</th></tr>
-    <tr><td>玉龙雪山</td><td>门票半价50元</td><td>门票免票+索道半价60元</td><td>学生证原件+身份证；退役军人优待证+身份证</td></tr>
-    <tr><td>虎跳峡</td><td>门票半价~22元</td><td>门票免票</td><td>同上（云南退役军人优待覆盖国有景区）</td></tr>
-    <tr><td>普达措</td><td>门票半价~69元</td><td>门票免票</td><td>同上（2026年云南退役军人优待确认普达措免票）</td></tr>
-    <tr><td>松赞林寺</td><td>门票半价~27元</td><td>门票免票</td><td>同上（携程确认退役军人凭优待证免门票）</td></tr>
-    <tr><td>木府</td><td>门票半价20元</td><td>门票免票（预计）</td><td>同上</td></tr>
-  </table>
-  
-  <div class="warn">⚠️ <b>证件提醒</b>：①学生证必须是<b>原件</b>（复印件/电子版不认）；②退伍军人需持<b>退役军人优待证+身份证</b>原件；③优惠仅限门票，环保车/索道/观光车等景区交通一般无优惠（玉龙雪山索道退伍军人半价除外）；④具体以景区当日公示为准，出发前可电话确认。</div>
-</div>
-
-<!-- ============ 住宿策略 ============ -->
-<div class="card">
-  <h2>⛺ 住宿策略：睡车里+钟点房洗澡</h2>
-  
-  <h3>各城市夜间温度（10月初）</h3>
-  <table>
-    <tr><th>城市</th><th>夜间温度</th><th>海拔</th><th>睡车里/帐篷可行性</th></tr>
-    <tr><td>大理</td><td>10-15℃</td><td>2000m</td><td class="good">✅ 舒适，车里/帐篷都行</td></tr>
-    <tr><td>丽江</td><td>5-12℃</td><td>2400m</td><td class="che">⚠️ 需厚睡袋/被子</td></tr>
-    <tr><td>香格里拉</td><td>0-5℃</td><td>3300m</td><td class="bad">❌ 太冷，建议住青旅</td></tr>
-  </table>
-  
-  <h3>钟点房洗澡方案</h3>
-  <table>
-    <tr><th>城市</th><th>钟点房价格</th><th>建议</th></tr>
-    <tr><td>大理</td><td>20-40元/4h（青旅）</td><td>D2晚上开一间</td></tr>
-    <tr><td>丽江</td><td>49元/2h（经济酒店）</td><td>D4/D6晚上开一间</td></tr>
-    <tr><td>香格里拉</td><td>80-120元/晚（青旅床位）</td><td>D5建议直接住一晚</td></tr>
-  </table>
-  
-  <div class="warn">⚠️ <b>帐篷扎哪里</b>：大理洱海生态廊道旁有空地（注意别在景区核心区扎营，有管理人员）；丽江古城周边停车场。香格里拉不建议帐篷（太冷）。找有厕所和水源的地方。</div>
-  
-  <div class="danger">❗ <b>关键提醒</b>：同学的车是几座的？5人睡5座轿车太挤（后排躺2人+前排放倒1人+2人帐篷），7座SUV/MPV才舒服。如果是5座轿车，建议2人带帐篷睡外面，3人睡车里。</div>
-</div>
-
-<!-- ============ 关键时间线 ============ -->
-<div class="card">
-  <h2>⏰ 关键时间线（现在就该行动的）</h2>
-  <table>
-    <tr><th>时间</th><th>事项</th><th>紧急程度</th></tr>
-    <tr><td><b>现在</b></td><td>确认5人身份：几个学生几个退伍军人，准备学生证+退役军人优待证原件</td><td class="bad">🔥 紧急</td></tr>
-    <tr><td><b>现在</b></td><td>准备装备：帐篷×2、睡袋×5（0℃温标）、充气垫</td><td class="bad">🔥 紧急</td></tr>
-    <tr><td><b>9/17</b></td><td>不用抢火车票了！（自驾不需要）</td><td class="good">✅ 已省</td></tr>
-    <tr><td><b>9/23</b></td><td>不用抢返程票了！（自驾不需要）</td><td class="good">✅ 已省</td></tr>
-    <tr><td><b>9/27 20:00</b></td><td>🔥 抢玉龙雪山10/4大索道票（"丽江旅游集团"小程序，120元/人）</td><td class="bad">🔥 最关键</td></tr>
-    <tr><td><b>9/28-9/30</b></td><td>查看国庆天气预报，准备衣物</td><td class="che">重要</td></tr>
-    <tr><td><b>9/30 晚上</b></td><td>加满油、检查车辆、装车出发前准备</td><td class="che">重要</td></tr>
-    <tr><td><b>9/30 13:00</b></td><td>出发！平果→昆明/楚雄方向</td><td class="bad">🔥 出发</td></tr>
-  </table>
-</div>
-
-<!-- ============ 装备清单 ============ -->
-<div class="card">
-  <h2>🎒 自驾+露营装备清单</h2>
-  <div class="grid2">
-    <div class="stat"><div class="num">🎒</div><div class="lbl">学生证×4+退役军人优待证×1</div></div>
-    <div class="stat"><div class="num">🆔</div><div class="lbl">身份证×5（必带原件）</div></div>
-    <div class="stat"><div class="num">⛺</div><div class="lbl">帐篷×2（2-3人帐）</div></div>
-    <div class="stat"><div class="num">🛏️</div><div class="lbl">睡袋×5（0℃温标）</div></div>
-    <div class="stat"><div class="num">💨</div><div class="lbl">充气垫×5</div></div>
-    <div class="stat"><div class="num">🧥</div><div class="lbl">厚外套/薄羽绒服</div></div>
-    <div class="stat"><div class="num">🕶️</div><div class="lbl">墨镜+防晒霜SPF50+</div></div>
-    <div class="stat"><div class="num">💊</div><div class="lbl">氧气瓶×3+常备药</div></div>
-    <div class="stat"><div class="num">📱</div><div class="lbl">充电宝×2+车充</div></div>
-    <div class="stat"><div class="num">🧰</div><div class="lbl">车载工具+备胎</div></div>
-  </div>
-  <div class="warn">⚠️ 香格里拉夜间0℃，睡袋必须选<b>0℃舒适温标</b>以下的。大理/丽江可以薄一点，但香格里拉那晚如果不住青旅，睡袋不够会冻醒。</div>
-</div>
-
-<!-- ============ 驾驶提醒 ============ -->
-<div class="card">
-  <h2>🚗 驾驶安全提醒</h2>
-  <ul class="tl">
-    <li><b>3本驾照轮换</b>：每3-4小时换一次驾驶员，绝不疲劳驾驶</li>
-    <li><b>D1/D7长途日</b>：凌晨5点出发，趁堵车前过昆明段</li>
-    <li><b>丽香公路</b>（丽江→香格里拉G214）：山路弯多，注意限速，别开太快</li>
-    <li><b>国庆堵车</b>：G56杭瑞高速大理-昆明段是全国最堵路段之一，做好心理准备</li>
-    <li><b>油费监控</b>：出发前加满，途中在昆明/大理补油，别等灯亮</li>
-    <li><b>10/7 24:00前必须下高速</b>！否则过路费全收约600元</li>
-    <li><b>停车过夜</b>：找正规停车场或有监控的路边停车点，贵重物品随身带</li>
-  </ul>
-</div>
-
-<!-- ============ 紧急联系 ============ -->
-<div class="card">
-  <h2>📞 紧急联系</h2>
-  <table>
-    <tr><th>电话</th><th>用途</th></tr>
-    <tr><td>122</td><td>交通事故报警</td></tr>
-    <tr><td>12122</td><td>高速救援</td></tr>
-    <tr><td>12328</td><td>交通运输服务监督</td></tr>
-    <tr><td>0888-512162</td><td>丽江客运总站</td></tr>
-    <tr><td>0887-8223501</td><td>香格里拉旅游局</td></tr>
-  </table>
-</div>
+</section>
 
 <footer>
-  <p>📌 平果出发 · 5人自驾 · 国庆滇西北8日游</p>
-  <p>📅 2026年9月30日–10月7日 · 更新于9月4日</p>
-  <p>⚠️ 门票价格以景区当日为准，天气以出发前预报为准</p>
+  <b>国庆滇西北 8 日自驾攻略</b><br>
+  平果 → 大理 → 丽江 → 香格里拉 · 5 人 · 9/30 – 10/7<br>
+  <span style="font-size:11px;opacity:.8">费用与政策为估算参考，出发前请以 12306 / 景区官网 / 美团实时查询为准</span><br>
+  <span style="font-size:11px;opacity:.7">最后更新：2026-09-04</span>
 </footer>
 
 </div>
