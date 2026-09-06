@@ -244,6 +244,9 @@ footer{text-align:center;padding:26px 20px;color:var(--gray);font-size:12px;line
 footer b{color:var(--blue)}
 .pill{display:inline-block;background:var(--blue-l);color:var(--blue);font-size:11.5px;padding:2px 8px;border-radius:5px;font-weight:600;margin:0 3px 3px 0}
 .pill.g{background:var(--gold-l);color:#8a4a10}
+.navbtn{display:inline-block;background:var(--blue-l);color:var(--blue);border:1px solid #bcd7ec;padding:7px 12px;border-radius:8px;font-size:12.5px;font-weight:700;text-decoration:none}
+.navbtn:hover{background:#d8e8f5}
+.navbtn small{display:block;font-size:10.5px;font-weight:400;color:var(--gray)}
 </style>
 </head>
 <body>
@@ -348,10 +351,135 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 2. 行程总览 ============ -->
+<!-- ============ 2. 路线方位示意 + 一键导航 ============ -->
 <section>
   <div class="sec-h">
     <div class="no">2</div>
+    <h2>路线方位示意图</h2>
+    <div class="hint">先看懂方位<br>再按天导航</div>
+  </div>
+
+  <div class="card" style="padding:8px">
+    <svg viewBox="0 0 680 570" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a6fae"/>
+        </marker>
+        <marker id="arg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#9aa5b1"/>
+        </marker>
+        <marker id="arn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#2e7d52"/>
+        </marker>
+        <marker id="aro" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#e07b28"/>
+        </marker>
+      </defs>
+
+      <!-- ===== 主路线 ===== -->
+      <!-- 去程 -->
+      <line x1="600" y1="520" x2="478" y2="372" stroke="#2a6fae" stroke-width="3.5" marker-end="url(#ar)"/>
+      <line x1="478" y1="372" x2="298" y2="275" stroke="#2a6fae" stroke-width="3.5" marker-end="url(#ar)"/>
+      <line x1="298" y1="275" x2="322" y2="118" stroke="#2a6fae" stroke-width="3.5" marker-end="url(#ar)"/>
+      <polyline points="322,118 255,82 140,48" fill="none" stroke="#2a6fae" stroke-width="3.5" marker-end="url(#ar)"/>
+      <!-- 返程虚线 -->
+      <path d="M 140,48 C 260,10 520,140 487,378" fill="none" stroke="#9aa5b1" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arg)"/>
+      <line x1="608" y1="508" x2="487" y2="378" stroke="#9aa5b1" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arg)"/>
+
+      <!-- 线段标签 -->
+      <text x="548" y="432" font-size="11.5" font-weight="700" fill="#0f4c81" text-anchor="middle">D1–D2 · 580 km</text>
+      <text x="548" y="470" font-size="10.5" fill="#9aa5b1" text-anchor="middle">返程 D8 · 700 km</text>
+      <text x="372" y="312" font-size="11.5" font-weight="700" fill="#0f4c81" text-anchor="middle">D2 · 330 km / 4h</text>
+      <text x="296" y="190" font-size="11.5" font-weight="700" fill="#0f4c81" text-anchor="end">D3晚–D4 · 180 km</text>
+      <text x="228" y="98" font-size="11.5" font-weight="700" fill="#0f4c81" text-anchor="end">D6 · 200 km / 4h</text>
+      <text x="470" y="80" font-size="10.5" fill="#9aa5b1" text-anchor="middle">返程 D7晚–D8</text>
+
+      <!-- 城市点 -->
+      <circle cx="600" cy="520" r="7" fill="#0f4c81"/>
+      <text x="586" y="545" font-size="13.5" font-weight="800" fill="#1a1a1a" text-anchor="end">平果</text>
+      <text x="586" y="560" font-size="10.5" fill="#5f6b7a" text-anchor="end">D1 15:00 出发</text>
+
+      <circle cx="478" cy="372" r="7" fill="#0f4c81"/>
+      <text x="494" y="368" font-size="13.5" font-weight="800" fill="#1a1a1a">昆明</text>
+      <text x="494" y="383" font-size="10.5" fill="#5f6b7a">D2 午餐 · D7晚宿</text>
+
+      <circle cx="298" cy="275" r="7" fill="#0f4c81"/>
+      <text x="284" y="271" font-size="13.5" font-weight="800" fill="#1a1a1a" text-anchor="end">大理</text>
+      <text x="284" y="286" font-size="10.5" fill="#5f6b7a" text-anchor="end">D2–D3</text>
+
+      <circle cx="322" cy="118" r="7" fill="#0f4c81"/>
+      <text x="338" y="114" font-size="13.5" font-weight="800" fill="#1a1a1a">丽江</text>
+      <text x="338" y="129" font-size="10.5" fill="#5f6b7a">D4–D5</text>
+
+      <circle cx="255" cy="82" r="5" fill="#e07b28"/>
+      <text x="247" y="66" font-size="11.5" font-weight="700" fill="#8a4a10" text-anchor="end">虎跳峡（D6 途经）</text>
+
+      <circle cx="140" cy="48" r="7" fill="#0f4c81"/>
+      <text x="126" y="42" font-size="13.5" font-weight="800" fill="#1a1a1a" text-anchor="end">香格里拉</text>
+      <text x="126" y="57" font-size="10.5" fill="#5f6b7a" text-anchor="end">D6–D7</text>
+
+      <!-- ===== D3 洱海环湖放大框 ===== -->
+      <rect x="430" y="24" width="240" height="236" rx="10" fill="#ffffff" stroke="#dde5ee"/>
+      <text x="442" y="46" font-size="12" font-weight="800" fill="#2e7d52">D3 · 洱海环湖 130 km</text>
+      <ellipse cx="552" cy="152" rx="76" ry="80" fill="#cfe3f2" stroke="#9fc3dd"/>
+      <text x="552" y="158" font-size="12.5" font-weight="700" fill="#5f8fb0" text-anchor="middle">洱 海</text>
+      <polyline points="482,222 496,192 484,158 469,122 506,94 610,86" fill="none" stroke="#2e7d52" stroke-width="2.2" marker-end="url(#arn)"/>
+      <circle cx="482" cy="222" r="4.5" fill="#2e7d52"/>
+      <text x="474" y="238" font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="end">大理古城</text>
+      <circle cx="496" cy="192" r="4.5" fill="#e07b28"/>
+      <text x="490" y="206" font-size="10.5" font-weight="700" fill="#8a4a10" text-anchor="end">① 龙龛日出 06:30</text>
+      <circle cx="484" cy="158" r="4.5" fill="#e07b28"/>
+      <text x="476" y="156" font-size="10.5" font-weight="700" fill="#8a4a10" text-anchor="end">② 磻溪 S 弯</text>
+      <circle cx="469" cy="122" r="4.5" fill="#1a1a1a"/>
+      <text x="461" y="120" font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="end">③ 喜洲</text>
+      <circle cx="610" cy="86" r="4.5" fill="#e07b28"/>
+      <text x="602" y="76" font-size="10.5" font-weight="700" fill="#8a4a10">④ 双廊日落 18:55</text>
+      <text x="552" y="250" font-size="10" fill="#5f6b7a" text-anchor="middle">西岸北上 → 东岸收尾 · 9 点前必须到 S 弯</text>
+
+      <!-- ===== D5 玉龙雪山放大框 ===== -->
+      <rect x="430" y="272" width="240" height="164" rx="10" fill="#ffffff" stroke="#dde5ee"/>
+      <text x="442" y="294" font-size="12" font-weight="800" fill="#8a4a10">D5 · 玉龙雪山（05:40 出发）</text>
+      <polyline points="462,352 548,322 622,296 592,372" fill="none" stroke="#e07b28" stroke-width="2.2" marker-end="url(#aro)"/>
+      <circle cx="462" cy="352" r="4.5" fill="#0f4c81"/>
+      <text x="452" y="368" font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="end">丽江古城</text>
+      <circle cx="548" cy="322" r="4.5" fill="#e07b28"/>
+      <text x="540" y="318" font-size="10.5" font-weight="700" fill="#8a4a10" text-anchor="end">甘海子 07:13 金山</text>
+      <circle cx="622" cy="296" r="4.5" fill="#e07b28"/>
+      <text x="614" y="292" font-size="10.5" font-weight="700" fill="#8a4a10" text-anchor="end">大索道 4506m</text>
+      <circle cx="592" cy="372" r="4.5" fill="#0f4c81"/>
+      <text x="584" y="388" font-size="10.5" font-weight="700" fill="#0f4c81" text-anchor="end">蓝月谷 11:00</text>
+      <text x="550" y="424" font-size="10" fill="#5f6b7a" text-anchor="middle">金山 → 索道 → 蓝月谷，一条线不走回头路</text>
+    </svg>
+    <div style="font-size:11.5px;color:var(--gray);padding:6px 8px 2px;line-height:1.6">
+      示意图仅表达<b>相对方位与行程顺序</b>，非精确比例地图。灰色虚线 = 返程走高速原方向。
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px;padding:12px 14px">
+    <div style="font-size:13.5px;font-weight:800;margin-bottom:8px">🧭 一键导航（点开高德地图，手机可直接唤起导航）</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <a class="navbtn" href="https://uri.amap.com/navigation?to=100.167845,25.692940,大理古城&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">D2 大理古城<small>古城停车场</small></a>
+      <a class="navbtn" href="https://uri.amap.com/navigation?to=100.175000,25.751000,龙龛码头&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">D3 龙龛码头<small>日出 · 宿车点</small></a>
+      <a class="navbtn" href="https://uri.amap.com/navigation?to=100.152000,25.810000,磻溪村&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">D3 磻溪村<small>S 弯 · 村口停车</small></a>
+      <a class="navbtn" href="https://uri.amap.com/navigation?to=100.188000,25.955000,双廊古镇&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">D3 双廊古镇<small>日落机位</small></a>
+      <a class="navbtn" href="https://uri.amap.com/navigation?to=100.233000,26.873000,丽江古城&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">D4 丽江古城<small>宿丽江</small></a>
+      <a class="navbtn" href="https://uri.amap.com/navigation?to=100.240000,27.103000,玉龙雪山甘海子&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">D5 甘海子<small>05:40 追金山</small></a>
+      <a class="navbtn" href="https://uri.amap.com/navigation?to=100.104000,27.182000,虎跳峡&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">D6 虎跳峡<small>上虎跳步道</small></a>
+      <a class="navbtn" href="https://uri.amap.com/navigation?to=99.703000,27.820000,独克宗古城&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">D6 独克宗古城<small>转经筒</small></a>
+      <a class="navbtn" href="https://uri.amap.com/navigation?to=99.726000,27.858000,噶丹松赞林寺&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">D7 松赞林寺<small>07:30 晨雾</small></a>
+      <a class="navbtn" href="https://uri.amap.com/navigation?to=99.932000,27.788000,普达措国家公园&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">D7 普达措<small>上午场</small></a>
+      <a class="navbtn" href="https://uri.amap.com/navigation?to=102.833000,24.881000,昆明市&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">D8 昆明<small>方案 B 宿点</small></a>
+    </div>
+    <div style="font-size:11.5px;color:var(--gray);margin-top:8px;line-height:1.6">
+      手机点击直接唤起高德 App 导航；电脑点击打开高德网页版定位。坐标已按高德系（GCJ-02）校准，名称可二次搜索校正。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. 行程总览 ============ -->
+<section>
+  <div class="sec-h">
+    <div class="no">3</div>
     <h2>8 天行程总览</h2>
     <div class="hint">金色行 = 卡黄金时段<br>的关键日</div>
   </div>
@@ -392,10 +520,10 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 3. 每日详细 ============ -->
+<!-- ============ 4. 每日详细 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">3</div>
+    <div class="no">4</div>
     <h2>每日详细行程</h2>
     <div class="hint">橙色行 = 黄金时段<br>红色行 = 注意事项</div>
   </div>
@@ -407,7 +535,7 @@ footer b{color:var(--blue)}
       <div class="row"><div class="tm">15:00</div><div class="ct"><b>平果出发</b><span class="note">满油出发，检查胎压、备胎、行车记录仪。走 G80 广昆高速。</span></div></div>
       <div class="row"><div class="tm">18:30</div><div class="ct"><b>百色 / 富宁服务区</b><span class="note">换手 + 吃饭。5 人两班倒，每人开 2 小时轮换。</span></div></div>
       <div class="row"><div class="tm">22:30</div><div class="ct"><b>砚山 / 丘北服务区宿车里</b><span class="note">找有热水、有厕所的大服务区过夜。SUV 放倒后排 + 充气垫，或扎帐篷。</span></div></div>
-      <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>国庆首日高速免费从 10/1 零点开始</b>9/30 上高速需领卡缴费，10/1 后下高速按免费处理。若想全程免费，可 9/30 晚 24:00 前在收费站附近等待。</div></div>
+      <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>高速免费：今晚不下高速即可</b>免费期从 10/1 00:00 起，以下高速时间为准。今晚宿砚山服务区（不下高速），明早继续开，10/1 下高速时自动全程免费，不需要等在收费站。</div></div>
     </div>
   </div>
 
@@ -431,7 +559,7 @@ footer b{color:var(--blue)}
     <div class="day-h gold"><span class="dn">D3 · 10/2 周五</span><span class="dd2">洱海环湖 ⭐ 全天重点</span><span class="dtag">约 130 km 环湖</span></div>
     <div class="day-b">
       <div class="row g"><div class="tm">06:30</div><div class="ct"><b>龙龛码头看日出</b><span class="note">⏰ 日出约 07:00。停车场走过去 5 分钟。逆光剪影 + 苍山十九峰。</span></div></div>
-      <div class="row g"><div class="tm">07:40</div><div class="ct"><b>磻溪村 S 弯（8 点前必到）</b><span class="note">⏰ 9 点后旅行团涌入、生态廊道禁机动车。这是洱海最出片的一个弯。</span></div></div>
+      <div class="row g"><div class="tm">07:40</div><div class="ct"><b>磻溪村 S 弯（8 点前必到）</b><span class="note">⏰ 9 点后旅行团涌入、生态廊道禁机动车。<b>车停磻溪村口停车场</b>，步行进廊道约 5 分钟。这是洱海最出片的一个弯。</span></div></div>
       <div class="row"><div class="tm">09:30</div><div class="ct"><b>喜洲古镇 + 稻田</b><span class="note">白族民居建筑群、严家大院。转角楼、稻田是网红机位。喜洲粑粑当早餐。</span></div></div>
       <div class="row"><div class="tm">11:30</div><div class="ct"><b>海舌公园 / 双廊方向</b><span class="note">沿途随停随拍，洱海东岸视角看苍山全景。</span></div></div>
       <div class="row"><div class="tm">14:00</div><div class="ct"><b>双廊古镇 + 南诏风情岛</b><span class="note">杨丽萍太阳宫、月亮宫外观。午后光线偏硬，适合逛店休息。</span></div></div>
@@ -450,7 +578,7 @@ footer b{color:var(--blue)}
       <div class="row"><div class="tm">13:00</div><div class="ct"><b>黑龙潭公园（远眺玉龙雪山倒影）</b><span class="note">免费 / 古城维护费已取消。得月楼 + 雪山倒影是经典机位，明天踩点。</span></div></div>
       <div class="row"><div class="tm">16:00</div><div class="ct"><b>束河古镇（比大研古城安静）</b><span class="note">青龙桥、九鼎龙潭。人流比丽江古城少一半，适合慢慢逛。</span></div></div>
       <div class="row g"><div class="tm">20:00</div><div class="ct"><b>丽江古城夜景</b><span class="note">⏰ 20:00 后红灯笼全亮。四方街、大水车、狮子山万古楼俯拍全城。</span></div></div>
-      <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>今晚 20:00 抢明天的玉龙雪山大索道票！</b>详见下方「关键时间线」。这是全行程最致命的一个节点。</div></div>
+      <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>若 9/27 还没抢到索道票，今晚 20:00 再刷一轮</b>每晚 20:00 放退票回流。真正的主战场是 9/27 20:00（提前 7 天抢 10/4 的票），今晚只是最后捡漏窗口，详见下方「关键时间线」。</div></div>
     </div>
   </div>
 
@@ -460,7 +588,7 @@ footer b{color:var(--blue)}
     <div class="day-b">
       <div class="row g"><div class="tm">05:40</div><div class="ct"><b>起床出发（全行程最早的一次）</b><span class="note">⏰ 必须 05:40 出门。丽江古城 → 甘海子约 45 分钟车程。</span></div></div>
       <div class="row g"><div class="tm">06:40</div><div class="ct"><b>甘海子占位，等日照金山</b><span class="note">⏰ <b>日出 07:13:31</b>，金色覆盖峰顶仅 15–20 分钟，07:35 后变白雪山。<b>10 月是黄金季第一月</b>，云层薄，看到概率高。</span></div></div>
-      <div class="row g"><div class="tm">07:40</div><div class="ct"><b>看完金山 → 游客中心取索道票</b><span class="note">提前网上订好，凭身份证 + 学生证 / 退伍证取票。</span></div></div>
+      <div class="row g"><div class="tm">07:40</div><div class="ct"><b>看完金山 → 游客中心取索道票</b><span class="note">⏰ 抢票时<b>选 08:00–09:30 场次</b>——07:35 金山结束后还要取票换装，别抢 07:30–08:00 场，会过期。凭身份证 + 学生证 / 退伍证取票。</span></div></div>
       <div class="row"><div class="tm">08:30</div><div class="ct"><b>大索道上冰川公园（4506 m）</b><span class="note">索道 20 分钟，上升 1,200 m。栈道走到 4680 m 观景台，慢走防高反。氧气瓶山下买（25 元），山上翻倍。</span></div></div>
       <div class="row"><div class="tm">❄</div><div class="ct"><b>10 月雪况预期，先说清楚</b><span class="note">冰川公园的<b>冰川常年不化，主峰一年四季白头</b>，不会是光秃秃的石头山。但栈道附近是岩石 + 斑驳残雪 + 冰川的混合，<b>漫山厚雪要等 12–2 月</b>（那时栈道反而可能因积雪封闭）。10 月的真正王牌是全年最高的晴空率——日照金山 + 蓝天出片，雪是加分项，碰上刚下过秋雪（10 月中下旬常见）就是白赚。</span></div></div>
       <div class="row"><div class="tm">11:00</div><div class="ct"><b>蓝月谷（正午最蓝）</b><span class="note">⏰ 11:00–14:00 直射光下湖水呈乳蓝色。玉液湖、镜潭湖、蓝月湖、听涛湖四级叠水。</span></div></div>
@@ -500,17 +628,17 @@ footer b{color:var(--blue)}
     <div class="day-h"><span class="dn">D8 · 10/7 周三</span><span class="dd2">香格里拉 → 平果（返程）</span><span class="dtag">约 1,300 km</span></div>
     <div class="day-b">
       <div class="row"><div class="tm">08:00</div><div class="ct"><b>方案 A：一整天开回去</b><span class="note">1,300 km / 约 15h。两人轮换，早 8 点出发 → 晚 23 点到。强度极大，不推荐。</span></div></div>
-      <div class="row"><div class="tm">08:00</div><div class="ct"><b>方案 B：开到昆明住一晚 ⭐ 推荐</b><span class="note">香格里拉 → 昆明约 700 km / 8h。10/7 晚住昆明（青旅/标间，国庆约 200 元/间），10/8 早 08:30 出发，约 700 km / 8h，晚 19–20 点到平果。<b>安全得多，且 10/8 高速仍免费（免费期到 10/8 24:00）</b>。</span></div></div>
+      <div class="row"><div class="tm">08:00</div><div class="ct"><b>方案 B：开到昆明住一晚 ⭐ 推荐</b><span class="note">香格里拉 → 昆明约 620 km / 7h。10/7 晚住昆明（青旅/标间，国庆约 200 元/间），10/8 早 08:30 出发，约 700 km / 8h，晚 19–20 点到平果。<b>安全得多，且 10/8 高速仍免费（免费期到 10/8 24:00）</b>。</span></div></div>
       <div class="row"><div class="tm">08:00</div><div class="ct"><b>方案 C：中途服务区过夜</b><span class="note">和去程一样宿车里，10/8 中午到家。最省钱但最累。</span></div></div>
       <div class="row tip"><div class="tm">⚠</div><div class="ct"><b>国庆高速免费期：10/1 00:00 – 10/8 24:00</b>方案 B 和 C 都在免费期内，过路费全省。方案 A 也在期内，但一天开 1,300 km 太危险。</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 4. 沿途顺路打卡 ============ -->
+<!-- ============ 5. 顺路点取舍结论 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">4</div>
+    <div class="no">5</div>
     <h2>沿途顺路点（已研究 · 不绕）</h2>
     <div class="hint">结论：全部放弃<br>只保黄金时段</div>
   </div>
@@ -588,10 +716,10 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 5. 费用明细 ============ -->
+<!-- ============ 6. 费用明细 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">5</div>
+    <div class="no">6</div>
     <h2>费用明细（5 人合计）</h2>
     <div class="hint">不含餐饮<br>住宿费 ≈ 0</div>
   </div>
@@ -647,10 +775,10 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 6. 门票优惠明细 ============ -->
+<!-- ============ 7. 门票优惠明细 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">6</div>
+    <div class="no">7</div>
     <h2>门票优惠明细</h2>
     <div class="hint">4 学生 + 1 退伍军人<br>共省 ¥1,161</div>
   </div>
@@ -712,10 +840,10 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 7. 自驾 vs 动车 ============ -->
+<!-- ============ 8. 自驾 vs 动车 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">7</div>
+    <div class="no">8</div>
     <h2>自驾 vs 动车 对比</h2>
     <div class="hint">5 人同口径<br>均不含餐饮</div>
   </div>
@@ -752,7 +880,7 @@ footer b{color:var(--blue)}
     <div style="font-size:13.5px;line-height:1.85">
       <b>结论：自驾省 ¥5,980（人均省 ¥1,196），且自由度碾压。</b><br>
       <span style="color:var(--gray);font-size:12.5px">
-      ① <b>车票口径：</b>平果/百色 → 大理需经昆明南中转，二等座单程约 <b>¥335 – ¥378</b>（老大自己查到 378，以 12306 实际为准），往返 × 5 人 = ¥3,780。<br>
+      ① <b>车票口径：</b>平果/百色 → 大理需经昆明南中转，二等座单程约 <b>¥335 – ¥378</b>（实际查询为 378，以 12306 实时为准），往返 × 5 人 = ¥3,780。<br>
       ② <b>动车方案最大痛点是住宿</b>：国庆期间大理/丽江标间普遍 ¥300–500/晚且一房难求，5 人 7 晚至少 3 间房 → ¥4,200 起步，这一项就抵掉自驾全部油费过路费。<br>
       ③ <b>自驾的隐性优势</b>：凌晨 5:40 出发追日照金山、清晨 7 点卡 S 弯——这些黄金时段只有自驾能做到，动车方案全部要放弃或打车。<br>
       ④ <b>自驾的代价</b>：2,800 km 长途驾驶疲劳，必须 2 人以上轮换；需要有 C 照以上驾照且无重大事故记录。
@@ -761,10 +889,10 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 8. 装备清单 ============ -->
+<!-- ============ 9. 装备清单 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">8</div>
+    <div class="no">9</div>
     <h2>住宿方案 + 装备清单</h2>
     <div class="hint">睡车里 / 帐篷<br>钟点房洗澡</div>
   </div>
@@ -857,10 +985,10 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 9. 关键时间线 ============ -->
+<!-- ============ 10. 关键时间线 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">9</div>
+    <div class="no">10</div>
     <h2>关键时间线（别错过）</h2>
     <div class="hint">红色 = 错过就没了</div>
   </div>
@@ -901,18 +1029,18 @@ footer b{color:var(--blue)}
   </div>
 </section>
 
-<!-- ============ 10. 风险提示 ============ -->
+<!-- ============ 11. 风险提示 ============ -->
 <section>
   <div class="sec-h">
-    <div class="no">10</div>
+    <div class="no">11</div>
     <h2>风险提示</h2>
   </div>
 
   <div class="risk">
     <div class="risk-h">⚠️ 出发前必须想清楚的 6 件事</div>
     <ul>
-      <li><b>高反是真实存在的风险。</b>玉龙雪山 4680 m、香格里拉 3,300 m。老大十几年前有高反史，虽已成年但也别掉以轻心。氧气瓶、红景天必带，感觉头痛恶心立即下撤，<b>不要硬撑</b>。</li>
-      <li><b>玉龙雪山大索道可能抢不到票。</b>国庆日限 1 万张，秒空是常态。抢不到就改去<b>云杉坪索道</b>（海拔 3,240 m，票多、也有雪山观景），或改去<b>拉市海</b>。别把 D5 全押在索道上。</li>
+      <li><b>高反是真实存在的风险。</b>玉龙雪山 4680 m、香格里拉 3,300 m。队友中有人十几年前有高反史，虽已成年但也别掉以轻心。氧气瓶、红景天必带，感觉头痛恶心立即下撤，<b>不要硬撑</b>。</li>
+      <li><b>玉龙雪山大索道可能抢不到票。</b>国庆日限 1 万张，秒空是常态。抢不到就改<b>云杉坪索道</b>（3240 m，票好买，草甸+雪山远景）或<b>牦牛坪索道</b>（更冷门），甘海子看金山不需要票，行程不塔。别把 D5 全押在索道上。</li>
       <li><b>2,800 km 长途驾驶，必须有 2 人以上轮换。</b>一人开全程是拿命赌博。每 2 小时换手，每 4 小时进服务区活动 15 分钟。</li>
       <li><b>睡车里要注意一氧化碳和保暖。</b>车里不开空调时不要长时间怠速（尾气倒灌风险）；车窗必须留缝通风；10 月滇西北夜间 3–8 ℃，睡袋温标不够会失温。</li>
       <li><b>国庆人流量是本攻略最大的变量。</b>黄金时段的安排（早上 7–9 点、傍晚 17–19 点）本身就是为了避开人流，但热门景点仍可能堵车。每天预留 1 小时缓冲时间。</li>
@@ -925,7 +1053,7 @@ footer b{color:var(--blue)}
   <b>国庆滇西北 8 日自驾攻略</b><br>
   平果 → 大理 → 丽江 → 香格里拉 · 5 人 · 9/30 – 10/7<br>
   <span style="font-size:11px;opacity:.8">费用与政策为估算参考，出发前请以 12306 / 景区官网 / 美团实时查询为准</span><br>
-  <span style="font-size:11px;opacity:.7">最后更新：2026-09-05</span>
+  <span style="font-size:11px;opacity:.7">最后更新：2026-09-06</span>
 </footer>
 
 </div>
