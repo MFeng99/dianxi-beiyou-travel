@@ -253,11 +253,11 @@ footer b{color:var(--blue)}
 </div>
 
 <div class="stats">
-  <div class="stat hi"><div class="k">总花费（5人）</div><div class="v">¥5,4<small>48</small></div><div class="n">不含餐饮 · 不含装备</div></div>
-  <div class="stat hi"><div class="k">人均</div><div class="v">¥1,0<small>90</small></div><div class="n">预算 ¥1,500 以内</div></div>
-  <div class="stat"><div class="k">总里程</div><div class="v">3,2<small>00 km</small></div><div class="n">油费 ¥1,900</div></div>
-  <div class="stat"><div class="k">过路费</div><div class="v">¥3<small>50</small></div><div class="n">仅 D9 一段</div></div>
-  <div class="stat"><div class="k">比动车省</div><div class="v">¥5,8<small>30</small></div><div class="n">5 人合计</div></div>
+  <div class="stat hi"><div class="k">总花费（5人）</div><div class="v">¥5,0<small>08</small></div><div class="n">不含餐饮 · 不含装备</div></div>
+  <div class="stat hi"><div class="k">人均</div><div class="v">¥1,0<small>02</small></div><div class="n">预算 ¥1,500 以内</div></div>
+  <div class="stat"><div class="k">总里程</div><div class="v">3,0<small>50 km</small></div><div class="n">油费 ¥1,830</div></div>
+  <div class="stat hi"><div class="k">过路费</div><div class="v">¥<small>0</small></div><div class="n">✅ 白嫖达成</div></div>
+  <div class="stat"><div class="k">比动车省</div><div class="v">¥6,2<small>70</small></div><div class="n">5 人合计</div></div>
 </div>
 
 <!-- ============ 0. 返程决策 ============ -->
@@ -274,14 +274,19 @@ footer b{color:var(--blue)}
     而我们的行程需要 9 天（9/30 出发、10/8 到家），<b>最后一天 10/8 的那段高速必然要付费</b>。
   </div>
 
+  <div class="warnbar">
+    <b>🚨 已确认：5 人里只有 2 人有驾照，没有第三个人驾龄满 3 年。</b><br>
+    结论是硬的 —— <b>全程高速主线只能 A 一个人开</b>。老大实习期（领证 3 个月）上高速需要驾龄满 3 年者陪同，
+    A 驾龄 2 年<b>不具备陪驾资格</b>。所以老大在高速上接手 = <b>罚款 200 元，且一旦出事故保险公司可以拒赔</b>。
+    <span style="color:var(--red)"><b>这 200 元不是重点，保险拒赔才是。宁可在服务区睡 1 小时，也别让老大碰高速主线。</b></span>
+  </div>
+
   <div class="okbar">
-    <b>你朋友想白嫖，这条路走得通，但有一个前提条件。</b><br>
-    白嫖的唯一办法是：<b>10/7 一天之内开到广西（约 1,150 km 到百色），赶在 24:00 前驶离高速</b>，剩下的 100 km 走国道回平果。
-    <b>难点不在钱，在司机——单日 13 小时高速，只有 1 个人能合法开。</b><br>
-    <b>破局点：</b>实习期驾驶员<b>不是不能上高速</b>，而是需要<b>持相应准驾车型、驾龄满 3 年的人坐在副驾陪同</b>。
-    你们现在卡在「A 驾龄 2 年，不够 3 年，没资格陪老大」。
-    <b>所以请立刻确认一件事：5 个人里（包括不常开车的），有没有任何一个人驾龄满 3 年？</b>
-    只要有一个，他坐副驾，老大就能合法开高速 → 两人轮换 → 白嫖方案立刻从「危险」变成「可行」。
+    <b>老大拍板：硬开。那就按「能活着到家」的标准把它做扎实。</b><br>
+    A 一个人扛 1,150 km 不现实，硬开不等于硬撑。下面三件事是<b>执行底线</b>，不是建议：
+    <b>① 每 2–2.5 小时必须进服务区休息 20 分钟</b>（法定是 4 小时，我们取一半）；
+    <b>② 设熔断线</b>，到点没跑够里程立刻改道住店（见下表）；
+    <b>③ 老大只在国道段接手</b>——百色下高速后那 100 km G324 国道，老大开完全合法，让 A 睡一会儿。
   </div>
 
   <div class="card">
@@ -290,21 +295,21 @@ footer b{color:var(--blue)}
         <tr><th style="width:11%">方案</th><th style="width:23%">10/7（D8）怎么走</th><th style="width:19%">10/8（D9）怎么走</th><th style="width:11%;text-align:right">过路费</th><th style="width:14%">单日最长驾驶</th><th>评价</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td><b>C 白嫖</b></td>
+        <tr class="pick">
+          <td><b>C 白嫖<br>已选</b></td>
           <td>香格里拉 → 百色 <b>1,150 km</b><br>05:00 出发，23:00 前下高速</td>
-          <td>百色 → 平果 <b>100 km</b> 走 G324 国道<br>中午到家</td>
+          <td>百色 → 平果 <b>100 km</b> 走 G324 国道<br><b>这段老大开</b>，中午到家</td>
           <td class="num">¥0</td>
           <td>13h + 2h 国道</td>
-          <td><b>完全免过路费。</b>但 13 小时高速 <b>1 个人扛 = 明确不建议</b>；<b>若有人驾龄满 3 年可陪老大轮换 → 变成首选</b>（每人 6.5h，可接受）。</td>
+          <td><b>完全免过路费，你朋友要的达成了。</b>但 13 小时高速 <b>A 一人扛</b>——所以<b>必须配下面的熔断线一起执行</b>，跑不动就认输住店，别赌。</td>
         </tr>
-        <tr class="pick">
-          <td><b>A 推荐</b></td>
-          <td>香格里拉 → 昆明 <b>620 km</b><br>宿呈贡营地</td>
+        <tr style="background:#f5f7f9">
+          <td><b>A 兜底</b></td>
+          <td>香格里拉 → 昆明 <b>620 km</b><br>宿呈贡营地（<b>就算中途认输也走这条</b>）</td>
           <td>昆明 → 平果 <b>680 km</b> 高速<br>傍晚到家</td>
           <td class="num">¥350</td>
           <td>7.5h + 8h</td>
-          <td><b>安全、从容，两天各 7–8 小时的正常强度。</b>人均多花 ¥70。<b>若确认无人驾龄满 3 年，就选这个。</b></td>
+          <td><b>熔断触发后的退路。</b>安全、从容，两天各 7–8 小时正常强度，人均多花 ¥70。<b>10/7 下高速仍免费，只有 10/8 那段 ¥350。</b></td>
         </tr>
         <tr>
           <td><b>B 折中</b></td>
@@ -332,9 +337,50 @@ footer b{color:var(--blue)}
     </div>
   </div>
 
+  <div class="card" style="margin-top:12px;border:2px solid var(--red)">
+    <div style="background:var(--red-l);color:var(--red);padding:10px 15px;font-weight:800;font-size:14.5px">
+      🚨 C 白嫖硬开日 · 执行手册（10/7 那天照这个走）
+    </div>
+    <div style="padding:13px 15px">
+      <div style="font-size:13px;line-height:1.9;color:#333">
+        <b>现实预期：1,150 km 理想情况 12.8 小时纯驾驶，加休息和服务区约 15–16 小时；国庆拥堵要按 18 小时准备。</b>
+        05:00 出发 → 顺利的话 20:00 前后到百色，<b>有 4 小时富余</b>；堵车的话 23:00 卡线。<b>所以必须设熔断。</b>
+      </div>
+
+      <table class="dtable" style="margin-top:11px">
+        <thead><tr><th style="width:14%">时间</th><th style="width:20%">里程节点</th><th>该做什么</th></tr></thead>
+        <tbody>
+          <tr><td><b>04:30</b></td><td>出发前</td><td>满油、检查胎压。<b>A 昨晚必须睡够 7 小时</b>，红牛／咖啡带 4 罐。导航设「百色」+ 避开拥堵。</td></tr>
+          <tr><td><b>05:00</b></td><td>0 km 香格里拉</td><td>准时出发。<b>早走 1 小时，熔断余地就多 1 小时。</b></td></tr>
+          <tr><td><b>07:30</b></td><td>约 200 km 丽江／大理界</td><td><b>第一次休息 20 分钟</b>。下车走动、洗脸。老大这会儿负责买早餐、盯导航。</td></tr>
+          <tr><td><b>10:00</b></td><td>约 420 km 楚雄／昆明前</td><td><b>第二次休息 30 分钟 + 加油。</b>加油别等见底，服务区国庆排队能排 40 分钟。</td></tr>
+          <tr class="pick"><td><b>12:30</b></td><td><b>约 620 km 昆明</b></td><td><b>🔴 熔断线 ①：14:00 还没到昆明 → 立刻在昆明下高速住一晚（10/7 下高速免费），10/8 走 A 兜底方案。</b>此时过路费 ¥0 已锁定，只多花 1 晚住宿。</td></tr>
+          <tr><td><b>15:00</b></td><td>约 800 km 石林／兴义方向</td><td>第三次休息 30 分钟。<b>进贵州界，山路多、隧道多，注意力最容易在这一段崩。</b></td></tr>
+          <tr class="pick"><td><b>19:00</b></td><td><b>约 1,000 km 黔桂界</b></td><td><b>🔴 熔断线 ②：21:00 还没进广西 → 在就近县城下高速住一晚</b>（兴义／隆林）。10/8 剩 300 km 走高速约 ¥150，或走国道慢慢晃。</td></tr>
+          <tr><td><b>22:00</b></td><td>约 1,150 km 百色</td><td><b>🔴 熔断线 ③：无论到没到，23:30 必须在最近出口下高速</b>，绝不能拖过 24:00——过了零点，全程 1,150 km 一分不减。</td></tr>
+          <tr><td><b>次日</b></td><td>百色 → 平果 100 km</td><td><b>走 G324 国道，这段换老大开</b>（实习期只限高速，国道合法）。2 小时，中午到家。</td></tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:11px;padding:10px 12px;background:var(--red-l);border-left:3px solid var(--red);border-radius:0 7px 7px 0;color:#7d1f1f;font-size:12.5px;line-height:1.85">
+        <b>三条不能破的规矩：</b><br>
+        ① <b>老大不上高速主线。</b>实习期无 3 年驾龄者陪同＝违法，罚款 200 元，<b>出事故保险可拒赔</b>。要在服务区换手？出了服务区闸机就是高速，一样算。<br>
+        ② <b>连续驾驶不超过 2.5 小时。</b>法定是 4 小时，我们取一半。进服务区就下车走动，坐着刷手机不算休息。<br>
+        ③ <b>A 说撑不住就是撑不住，立刻熔断。</b>省下的过路费最多 ¥350，人均 ¥70。<b>用 ¥70 换一条命，这账不用算。</b>
+      </div>
+
+      <div style="margin-top:11px;padding:10px 12px;background:var(--blue-l);border-left:3px solid var(--blue);border-radius:0 7px 7px 0;color:#0f3d5c;font-size:12.5px;line-height:1.85">
+        <b>不摸方向盘的 4 个人，这天的活：</b><br>
+        副驾（固定 1 人）：<b>不许睡</b>，负责导航、看路牌、跟 A 说话、每 30 分钟递水。<br>
+        后排 3 人：轮流跟 A 聊天、负责加油／买吃的／找厕所、<b>看到 A 揉眼睛或跑偏立刻喊停</b>。<br>
+        <b>准备一份提神包</b>：红牛／咖啡、薄荷糖、湿巾、风油精。别放后备箱，放副驾脚边。
+      </div>
+    </div>
+  </div>
+
   <div class="card" style="margin-top:12px;border:2px solid var(--green)">
     <div style="background:var(--green-l);color:var(--green);padding:10px 15px;font-weight:800;font-size:14.5px">
-      ★ 白嫖最优解：砍掉一天，不用拼命开
+      ★ 还是想稳妥白嫖？砍掉一天，不用拼命开<span style="font-weight:600;font-size:12.5px">（改主意时看这里）</span>
     </div>
     <div style="padding:13px 15px">
       <div style="font-size:13px;line-height:1.9;color:#333">
@@ -454,8 +500,9 @@ footer b{color:var(--blue)}
         <li class="pi"><div class="pt">09:30</div><div class="ph">喜洲古镇 + 稻田</div><div class="pd">白族民居建筑群、严家大院（门票约 ¥25）、转角楼。镇外稻田是网红机位，9–10 月稻穗金黄。</div></li>
         <li class="pi"><div class="pt">11:30</div><div class="ph">海舌公园 / 双廊方向</div><div class="pd">环海西路北段，随停随拍。这里是洱海看苍山全景最好的一段。</div></li>
         <li class="pi"><div class="pt">13:00</div><div class="ph">双廊古镇</div><div class="pd">杨丽萍太阳宫、月亮宫外观，南诏风情岛（船票约 ¥50，可选）。午后光线偏硬，适合逛店、喝咖啡休息。</div></li>
-        <li class="pi g"><div class="pt">17:30</div><div class="ph">双廊日落（18:55 落日）</div><div class="pd">⏰ <b>提前 1 小时占机位。</b>玉几岛、海街是最佳观景点，太阳落进洱海、苍山十九峰做背景，是洱海一日的高潮。</div></li>
-        <li class="pi"><div class="pt">19:30</div><div class="ph">返回才村营地</div><div class="pd">双廊 → 才村约 45 km / 1 小时。连住第二晚，<b>不用挪窝、不用重新搭帐篷</b>。</div></li>
+        <li class="pi g"><div class="pt">17:30</div><div class="ph">双廊日落（18:55 落日）<span style="font-weight:600;color:var(--gold)"> ← 若改去者摩山，此处 14:30 就撤</span></div><div class="pd">⏰ <b>提前 1 小时占机位。</b>玉几岛、海街是最佳观景点，太阳落进洱海、苍山十九峰做背景，是洱海一日的高潮。<br>
+          <b>⚠ 改选者摩山的话：14:30 从双廊出发 → 15:45 到山脚「福庆山庄」→ 16:00 前必须进山（大限）→ 17:00 山顶 → 17:30–18:30 日落 → 18:30–18:45 蓝调 → 19:00 下山 → 20:00 回营地。</b></div></li>
+        <li class="pi"><div class="pt">19:30</div><div class="ph">返回才村营地</div><div class="pd">双廊 → 才村约 45 km / 1 小时（者摩山 → 才村约 20 km / 30 分钟，反而更近）。连住第二晚，<b>不用挪窝、不用重新搭帐篷</b>。</div></li>
       </ul>
       <div class="sleep">
         <div class="sh">⛺ 夜宿：幕天席地营地（连住第二晚） <span class="px">¥98 / 车</span></div>
@@ -589,11 +636,11 @@ footer b{color:var(--blue)}
         <li class="pi"><div class="pt">10:00</div><div class="ph">普达措国家公园</div><div class="pd">⏰ <b>09:00–13:00 最佳</b>：上午光线穿透林间，属都湖晨雾未散，野生动物活跃。下午高原易起云，湖面发暗。<br>属都湖 + 碧塔海，观光车 + 栈道徒步约 4 小时。<br><b>⚠ 开放 08:00–16:30，务必 13:00 前入园</b>。公园入口在城区东边约 22 km。</div></li>
         <li class="pi"><div class="pt">16:00</div><div class="ph">纳帕海依拉草原</div><div class="pd">季节性高原湖泊，10 月水草丰美。环湖公路自驾一圈，可看黑颈鹤、牦牛群、马群。</div></li>
         <li class="pi g"><div class="pt">18:00</div><div class="ph">纳帕海草原日落</div><div class="pd">⏰ 开阔草原无遮挡，日落时整个天空烧起来——<b>香格里拉最好的黄昏机位</b>，比古城更值得。</div></li>
-        <li class="pi"><div class="pt">20:00</div><div class="ph">检查车况、加满油</div><div class="pd">明天要开 620 km。顺便把营地装备（帐篷、睡袋、防潮垫）翻出来晾一下、确认齐全。</div></li>
+        <li class="pi r"><div class="pt">20:00</div><div class="ph">检查车况、加满油 · 明天是硬开日</div><div class="pd"><b>明天 1,150 km，全程高速只能 A 一个人开。</b>今晚务必睡好，<b>红牛／咖啡、提神包今晚就备好</b>。营地装备晾一下、确认齐全。</div></li>
       </ul>
       <div class="sleep hotel">
         <div class="sh">🏨 夜宿：香格里拉民宿（连住第二晚） <span class="px">不挪窝</span></div>
-        <div class="sr">明天是长途日（620 km），今晚务必睡好。行李不用搬。</div>
+        <div class="sr">明天是<b>硬开日（1,150 km）</b>，今晚务必睡好，<b>A 尤其要睡够 7 小时。</b>行李不用搬。</div>
       </div>
       <div class="navrow">
         <a class="navbtn" href="https://uri.amap.com/navigation?to=99.705871,27.860031,噶丹松赞林寺&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">松赞林寺<small>07:30 晨雾</small></a>
@@ -602,123 +649,80 @@ footer b{color:var(--blue)}
     </div>
   </div>
 
-  <!-- D8 -->
+  <!-- D8 · 硬开白嫖日 -->
   <div class="page" id="d8">
     <div class="page-h ret">
-      <div class="top"><span class="dnum">D8</span><span class="ddate">10月7日 · 周三</span><span class="dbadge">⛺ 露营</span></div>
-      <div class="dtitle">香格里拉 → 昆明（长途返程第一程）</div>
-      <div class="dmeta"><span>620 km</span><span>约 7.5 小时</span><span>原路返回</span><span>免费期最后一天</span></div>
+      <div class="top"><span class="dnum">D8</span><span class="ddate">10月7日 · 周三</span><span class="dbadge">🚨 硬开日</span></div>
+      <div class="dtitle">香格里拉 → 百色（白嫖过路费 · 1,150 km）</div>
+      <div class="dmeta"><span>1,150 km</span><span>05:00 出发</span><span>A 一人开高速</span><span>宿：车 / 服务区 / 或熔断住店</span></div>
     </div>
     <div class="page-b">
-      <div class="proute">📍 香格里拉 <b>→</b> 丽江 <b>→</b> 大理 <b>→</b> 楚雄 <b>→</b> 昆明呈贡营地</div>
-      <ul class="ptl">
-        <li class="pi"><div class="pt">08:00</div><div class="ph">出发返程</div><div class="pd">原路返回：G214 → 大丽高速 → 楚大高速 → 昆明绕城。全程高速。</div></li>
-        <li class="pi"><div class="pt">10:30</div><div class="ph">丽江服务区 · 换手</div><div class="pd">每 2 小时换手，每 4 小时进服务区活动 15 分钟。</div></li>
-        <li class="pi"><div class="pt">12:30</div><div class="ph">大理 / 楚雄服务区午餐</div><div class="pd">今天的重头是赶路，别在景点停留。</div></li>
-        <li class="pi"><div class="pt">17:30</div><div class="ph">抵达昆明东南郊 → 呈贡营地</div><div class="pd">导航「<b>横冲水库帐篷宿营地</b>」。<b>⚠ 进村后导航会提示「即将进入狭窄小路，请选择位置停车」——不要右转</b>，那是泥泞土路。沿主路继续靠右直行，看到<b>绿白相间的公厕</b>后继续靠右，上右侧有围栏的柏油路，过一个较大的弯即到。</div></li>
-        <li class="pi"><div class="pt">19:00</div><div class="ph">扎营、休整</div><div class="pd">10 月昆明夜间 <b>12–15 ℃</b>，不冷，普通睡袋足够。</div></li>
+      <div class="proute">📍 香格里拉 <b>→</b> 丽江 <b>→</b> 大理 <b>→</b> 楚雄 <b>→</b> 昆明 <b>→</b> 石林 <b>→</b> 兴义 <b>→</b> 百色　（全程高速，24:00 前必须下）</div>
+
+      <div class="pnote" style="background:var(--red-l);border-left-color:var(--red);color:#7d1f1f">
+        <b>🚨 今天全程高速只能 A 一个人开。</b>老大实习期（领证 3 个月）+ 无满 3 年驾龄者陪同 ＝ 上高速罚款 200 元，
+        <b>且出事故保险公司可拒赔</b>。<b>这 200 元不是重点，拒赔才是。</b>今天 A 要是撑不住，立刻执行下面的熔断，
+        <b>别硬撑，也别让老大接手。</b>
+      </div>
+
+      <ul class="ptl" style="margin-top:14px">
+        <li class="pi r"><div class="pt">04:30</div><div class="ph">起床、满油、出发前检查</div><div class="pd"><b>A 昨晚必须睡够 7 小时</b>，今晚（D7）别熬夜。红牛／咖啡带 4 罐、放副驾脚边别塞后备箱。导航设「百色」并打开<b>避开拥堵</b>。</div></li>
+        <li class="pi r"><div class="pt">05:00</div><div class="ph">准时出发（早走 1 小时，熔断余地就多 1 小时）</div><div class="pd">G214 出城 → 大丽高速 → 楚大高速 → 昆明绕城 → G80 广昆高速。<b>全程高速，A 主驾。</b></div></li>
+        <li class="pi"><div class="pt">07:30</div><div class="ph">约 200 km · 丽江／大理界　第一次休息 20 分钟</div><div class="pd">下车走动、洗脸。<b>坐着刷手机不算休息。</b>老大负责买早餐、盯导航。</div></li>
+        <li class="pi"><div class="pt">10:00</div><div class="ph">约 420 km · 楚雄／昆明前　第二次休息 30 分钟 + 加油</div><div class="pd"><b>加油别等见底</b>——国庆服务区排队能排 40 分钟。</div></li>
+        <li class="pi r"><div class="pt">12:30</div><div class="ph">🔴 熔断线 ①：约 620 km · 昆明</div><div class="pd"><b>14:00 还没到昆明 → 立刻在昆明下高速住一晚。</b>10/7 下高速仍然免费，所以<b>已经跑过的这 620 km 一分钱不收</b>，只是多花 1 晚住宿 + 次日 10/8 那段的 ¥350。跑得动就继续，别赌。</div></li>
+        <li class="pi"><div class="pt">15:00</div><div class="ph">约 800 km · 石林／兴义方向　第三次休息 30 分钟</div><div class="pd">进贵州界，<b>山路多、隧道多，注意力最容易在这一段崩</b>。副驾不许睡。</div></li>
+        <li class="pi r"><div class="pt">19:00</div><div class="ph">🔴 熔断线 ②：约 1,000 km · 黔桂界</div><div class="pd"><b>21:00 还没进广西 → 在就近县城下高速住一晚</b>（兴义／隆林）。次日剩 300 km，走高速约 ¥150 或走国道慢慢晃。</div></li>
+        <li class="pi r"><div class="pt">22:00</div><div class="ph">🔴 熔断线 ③：约 1,150 km · 百色</div><div class="pd"><b>无论到没到，23:30 必须在最近出口下高速。</b>过了 24:00，前面 1,150 km 全程收费，白嫖直接失败。下高速后就近找<b>大型服务区或 24h 停车场睡车里</b>（和 D1 一样）。</div></li>
       </ul>
-      <div class="sleep">
-        <div class="sh">⛺ 夜宿：呈贡横冲水库帐篷宿营地 <span class="px">¥20 / 车 · 不限时</span></div>
+
+      <div class="sleep car">
+        <div class="sh">🚗 夜宿：百色服务区 / 车内 <span class="px">¥0</span></div>
         <div class="sr">
-          · <b>地址：</b>昆明市呈贡区马金铺街道横冲社区居民委员会西侧 120 米<br>
-          · <b>收费：¥20 / 车（不限时，实为垃圾清运费），自带帐篷不另收费</b>——5 人人均 ¥4，全程最便宜的一晚。<br>
-          · <b>配套：</b>公厕、自来水、可明火、轿车可达（底盘低也能进）。<br>
-          · <b>为什么选这儿：</b>营地在<b>昆明东南郊，正对明天回平果的 G80 方向，不绕路</b>。
+          · <b>睡车里的话：睡前排不睡后排</b>，副驾留给高个子（空间大），车窗留 2–3 cm 通风缝，<b>绝不怠速开空调</b>。<br>
+          · 若实在撑不住，<b>百色有连锁酒店约 ¥150–200</b>，5 人开两间即可。<b>别为省这点钱硬撑</b>。<br>
+          · <b>兜底：</b>如果 22:00 前就到了百色，直接开进市区吃顿好的再睡——今天赚到的 ¥350 过路费，花 ¥100 犒劳一下完全合理。
         </div>
       </div>
-      <div class="pnote"><b>⚠ 今天是免费期最后一天（10/7 24:00 结束）。</b>如果你们改用了 B 或 C 方案（见开头决策表），今天必须在 <b>24:00 前驶离高速</b>，请重新规划今天的落脚点。</div>
-      <div class="pnote gold"><b>兜底方案：</b>若遇大雨、或所有人已精疲力竭，<b>直接开进 G80 沿线大型服务区睡车里</b>，和 D1 一样，零成本零绕路。别为了省 ¥20 硬撑。</div>
+
+      <div class="pnote"><b>不摸方向盘的 4 个人今天的任务：</b><br>
+        ① <b>副驾固定 1 人，全程不许睡</b>——负责导航、看路牌、跟 A 说话、每 30 分钟递水。<br>
+        ② 后排 3 人轮流陪聊、负责加油／买吃的／找厕所。<br>
+        ③ <b>看到 A 揉眼睛、跑偏、打哈欠连串，立刻喊停</b>——这不是扫兴，是救命。<br>
+        ④ 准备好<b>提神包</b>：红牛、薄荷糖、湿巾、风油精。</div>
+
       <div class="navrow">
-        <a class="navbtn" href="https://uri.amap.com/navigation?to=102.833,24.881,昆明市&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">昆明方向<small>往呈贡</small></a>
+        <a class="navbtn" href="https://uri.amap.com/navigation?to=106.6186,23.9012,百色市&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">导航：百色市<small>D8 终点</small></a>
+        <a class="navbtn" href="https://uri.amap.com/navigation?to=102.8329,24.8801,昆明市&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">导航：昆明<small>熔断点 ①</small></a>
       </div>
     </div>
   </div>
 
   <!-- D9 -->
   <div class="page" id="d9">
-    <div class="page-h ret">
+    <div class="page-h">
       <div class="top"><span class="dnum">D9</span><span class="ddate">10月8日 · 周四</span><span class="dbadge">🏠 到家</span></div>
-      <div class="dtitle">昆明 → 平果（付费高速段）</div>
-      <div class="dmeta"><span>780 km</span><span>约 8.5 小时</span><span>过路费 ¥350</span><span>不在免费期</span></div>
+      <div class="dtitle">百色 → 平果（走国道，老大接手）</div>
+      <div class="dmeta"><span>100 km</span><span>约 2 小时</span><span>G324 国道 · 过路费 ¥0</span><span>中午到家</span></div>
     </div>
     <div class="page-b">
-      <div class="proute">📍 呈贡营地 <b>→</b> G80 广昆高速 <b>→</b> 石林 <b>→</b> 兴义 <b>→</b> 百色 <b>→</b> 平果</div>
+      <div class="proute">📍 百色 <b>→</b> G324 国道 <b>→</b> 田东 <b>→</b> 平果　（<b>不上高速，全程国道</b>）</div>
       <ul class="ptl">
-        <li class="pi"><div class="pt">08:30</div><div class="ph">拔营出发</div><div class="pd">营地就在昆明东南，<b>直接上 G80，不绕路</b>。</div></li>
-        <li class="pi r"><div class="pt">08:40</div><div class="ph">⚠ 今天的高速要付费，走 ETC 更省事</div><div class="pd"><b>免费期已在 10/7 24:00 结束</b>，今天全程正常计费，昆明 → 平果约 ¥350（按 0.45 元/km 估算，以实际为准）。<br><b>ETC 提醒：</b>上高速走 ETC 车道，下高速也走 ETC——<b>人工通道上高速不要走 ETC 下高速</b>，会因无入口信息导致栏杆不抬杆，只能折返。</div></li>
-        <li class="pi"><div class="pt">12:30</div><div class="ph">兴义 / 百色服务区午餐</div><div class="pd">进入贵州/广西境内，海拔下降，气温回升。</div></li>
-        <li class="pi"><div class="pt">18:00</div><div class="ph">抵达平果</div><div class="pd">行程结束。记得检查车上有没有落东西。</div></li>
+        <li class="pi"><div class="pt">09:00</div><div class="ph">睡到自然醒、吃碗百色米粉</div><div class="pd">昨晚硬开 1,150 km，今天<b>不赶时间</b>。睡够了再走，这是全程最后一个早上。</div></li>
+        <li class="pi g"><div class="pt">10:30</div><div class="ph">百色出发，<b>这段换老大开</b></div><div class="pd">✅ <b>实习期只限制高速公路，国道、省道、城市道路都可以合法开。</b>让 A 在副驾睡一路，老大把最后 100 km 开完——既是合法的轮换，也给这趟旅程一个完整的收尾。</div></li>
+        <li class="pi"><div class="pt">12:30</div><div class="ph">抵达平果</div><div class="pd">行程结束。<b>下车前把车上翻一遍</b>：充电宝、证件、睡袋里有没有塞东西。</div></li>
       </ul>
-      <div class="pnote blue"><b>为什么这 ¥350 值得花：</b>替代方案是 10/7 一口气开 1,250 km 到百色再走国道——省 ¥350，但单日高速驾驶 13 小时。<b>你们全程只有 1 名合法的高速司机</b>，疲劳驾驶的致死率与酒驾同级。人均多花 ¥70 换全程安全，这笔账很清楚。</div>
+
+      <div class="pnote" style="background:var(--green-l);border-left-color:var(--green);color:#14512f">
+        <b>✅ 白嫖达成：全程过路费 ¥0。</b><br>
+        10/7 24:00 前驶离高速（1,150 km 段免费）+ 10/8 走 G324 国道（本身不收费）＝ <b>一分钱过路费没花</b>。
+        你朋友要的，做到了。<br>
+        <b>如果中途触发了熔断：</b>别觉得亏——已经跑过的高速段全免，只多付次日那一段（昆明出发 ¥350 / 兴义出发约 ¥150），加 1 晚住宿。<b>人均最多多 ¥110，换的是安全。</b>
+      </div>
+
       <div class="navrow">
         <a class="navbtn" href="https://uri.amap.com/navigation?to=107.5879,23.3252,平果市&mode=car&src=clawtrip&coordinate=gaode&callnative=0" target="_blank">导航：平果市<small>终点</small></a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 2. 黄金时段 ============ -->
-<section>
-  <div class="sec-h">
-    <div class="no">2</div>
-    <h2>黄金时段速查表</h2>
-    <div class="hint">橙色 = 必卡点<br>错过大打折扣</div>
-  </div>
-
-  <div class="gold-note">
-    <b>这张表是整个行程的核心。</b>同一景点，去对时间是明信片，去错时间是路人照。橙色三项必须按时段卡死（日照金山、洱海日出、S 弯晨光），其余按颜色灵活调整。
-  </div>
-
-  <div class="card">
-    <table class="gtable">
-      <thead><tr><th style="width:26%">景点</th><th style="width:22%">黄金时段</th><th>为什么是这个时间</th></tr></thead>
-      <tbody>
-        <tr><td class="spot">玉龙雪山 · 日照金山<small>甘海子 / 冰川公园</small></td><td><span class="timebar t-gold">06:40 – 07:30</span></td><td class="why">10 月 – 次年 4 月是日照金山黄金季。<b>10/4 日出 07:13</b>，金色覆盖峰顶仅 <b>15–20 分钟</b>，07:35 后变回白雪山。必须 06:40 前站好位。</td></tr>
-        <tr><td class="spot">洱海 · 龙龛码头日出<small>大理</small></td><td><span class="timebar t-gold">06:30 – 07:40</span></td><td class="why">10 月初大理日出约 <b>07:00</b>，太阳从苍山背后翻上来打在水面，逆光剪影最美。07:40 后光线变硬。</td></tr>
-        <tr><td class="spot">磻溪村 S 弯<small>生态廊道 · 大理</small></td><td><span class="timebar t-gold">07:30 – 08:30</span></td><td class="why"><b>9 点后旅行团大巴涌入 + 生态廊道机动车禁入</b>，车开不进去、人也挤爆。8 点前到才拍得到干净的弯道晨光。</td></tr>
-        <tr><td class="spot">松赞林寺 · 晨雾金顶<small>香格里拉</small></td><td><span class="timebar t-gold">07:30 – 09:00</span></td><td class="why">清晨山谷起雾，阳光斜打金顶，拉姆央措湖有完整倒影。10 点后雾散、转顶光，照片发灰。</td></tr>
-        <tr><td class="spot">双廊 · 洱海日落<small>大理</small></td><td><span class="timebar t-blue">17:30 – 19:00</span></td><td class="why">10 月初大理日落约 <b>18:55</b>。提前 1 小时占机位，苍山十九峰做背景。</td></tr>
-        <tr><td class="spot">普达措国家公园<small>香格里拉</small></td><td><span class="timebar t-blue">09:00 – 13:00</span></td><td class="why">上午光线穿透林间，属都湖晨雾未散，野生动物活跃。<b>注意 16:30 停止入园。</b></td></tr>
-        <tr><td class="spot">虎跳峡 · 上虎跳<small>丽江→香格里拉途中</small></td><td><span class="timebar t-blue">10:30 – 13:00</span></td><td class="why">太阳升高后能照进峡谷，江水呈金沙色。下午峡谷背阴，水是灰绿色。</td></tr>
-        <tr><td class="spot">蓝月谷<small>玉龙雪山脚下</small></td><td><span class="timebar t-blue">11:00 – 14:00</span></td><td class="why">正午直射时湖水呈最饱和的蓝绿色（钙化湖靠阳光散射）。早晚是灰蓝，不出片。</td></tr>
-        <tr><td class="spot">独克宗古城 · 转经筒<small>香格里拉</small></td><td><span class="timebar t-green">18:00 – 20:00</span></td><td class="why">傍晚金色斜光打在转经筒和白墙上，龟山大佛寺可俯拍古城全貌。</td></tr>
-        <tr><td class="spot">丽江古城 · 夜景<small>丽江</small></td><td><span class="timebar t-green">20:00 – 22:30</span></td><td class="why">红灯笼全亮、四方街人流最旺，酒吧街开始热闹。白天古城人多且商业化。</td></tr>
-        <tr><td class="spot">大理古城<small>大理</small></td><td><span class="timebar t-gray">随时 / 傍晚更佳</span></td><td class="why">无强时段限制。避开正午暴晒即可，17:00 后逛最舒服。</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="card" style="margin-top:12px;padding:13px 15px">
-    <div style="font-size:13.5px;font-weight:800;margin-bottom:8px">✂️ 时间赶不及就按这个顺序砍（必打卡 vs 可放弃）</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;font-size:12.5px;line-height:1.85">
-      <div>
-        <div style="font-weight:800;color:var(--green);margin-bottom:5px">✅ 必打卡（砍了这趟白来）</div>
-        <div style="color:var(--gray)">
-          1. <b>玉龙雪山 · 日照金山</b>　10/4 日出 07:13，金色仅 15–20 分钟，全年只有 10 月–次年 4 月能看<br>
-          2. <b>玉龙雪山 · 大索道 + 蓝月谷</b>　4,680 m，此行海拔最高点<br>
-          3. <b>洱海 · 龙龛码头日出</b>　06:30 到位<br>
-          4. <b>洱海 · 磻溪 S 弯</b>　8 点前，晚了就废<br>
-          5. <b>双廊日落</b>　洱海一日的高潮<br>
-          6. <b>松赞林寺 · 晨雾金顶</b>　07:30–09:00
-        </div>
-      </div>
-      <div>
-        <div style="font-weight:800;color:var(--red);margin-bottom:5px">❌ 可放弃（从上往下依次砍）</div>
-        <div style="color:var(--gray)">
-          1. <b>纳帕海</b>　草原日落好看，但不是唯一<br>
-          2. <b>喜洲古镇</b>　大理古城同样能感受白族风情<br>
-          3. <b>黑龙潭公园</b>　只是给雪山踩点用<br>
-          4. <b>束河古镇</b>　和大研古城同质<br>
-          5. <b>独克宗古城</b>　傍晚逛 1 小时即可<br>
-          6. <b>虎跳峡栈道</b>　顺路看 1 小时，别下 200 级台阶<br>
-          7. <b>普达措</b>　门票 ¥138 + 耗时 4h，<b>性价比最低的一个</b>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:11px;padding:9px 12px;background:var(--gold-l);border-left:3px solid var(--gold);border-radius:0 7px 7px 0;color:#7a4210;font-size:12.5px;line-height:1.8">
-      <b>如果你的优先级是「白嫖过路费 + 不太累」：</b>按上面的顺序砍到第 1、7 项（即放弃纳帕海和普达措），
-      行程就能压成 8 天，10/7 到家、过路费 ¥0、人均降到约 ¥882。<b>具体算法见开头「★ 白嫖最优解」。</b>
     </div>
   </div>
 </section>
@@ -728,7 +732,7 @@ footer b{color:var(--blue)}
   <div class="sec-h">
     <div class="no">3</div>
     <h2>住宿全案：8 晚分配 + 5 人怎么睡</h2>
-    <div class="hint">露营 4 · 民宿 3 · 睡车 1<br>后排不能放倒 · 只有 1 顶帐篷</div>
+    <div class="hint">露营 3 · 民宿 3 · 睡车 2<br>后排不能放倒 · 帐篷 1 顶不买新的</div>
   </div>
 
   <div class="card">
@@ -741,16 +745,24 @@ footer b{color:var(--blue)}
         <tr><td class="dd">D4<span class="dt">10/3 周六</span></td><td><span class="sb sb-hotel">🏨 民宿</span></td><td class="pl">丽江古城 / 束河<small>一间房打地铺</small></td><td class="why"><b>雪山前夜，必须睡好。</b>次日 05:40 起床、4,680 m 高海拔，睡不好会直接放大高反概率。</td></tr>
         <tr><td class="dd">D5<span class="dt">10/4 周日</span></td><td><span class="sb sb-tent">⛺ 露营</span></td><td class="pl">猎鹰谷 · 丽江白沙营地<small>¥100 左右 / 营位</small></td><td class="why">白沙在<b>丽江去香格里拉的必经路上</b>（G214 出城口），次日零绕路。营地正对雪山十三峰，24h，累了可开标间。</td></tr>
         <tr><td class="dd">D6<span class="dt">10/5 周一</span></td><td><span class="sb sb-hotel">🏨 民宿</span></td><td class="pl">香格里拉 · 独克宗附近<small>一间房打地铺</small></td><td class="why"><b>高原首夜（3,300 m），绝对不能冻着。</b>夜间 3–5 ℃，建议选带地暖 / 供氧房型。</td></tr>
-        <tr><td class="dd">D7<span class="dt">10/6 周二</span></td><td><span class="sb sb-hotel">🏨 民宿</span></td><td class="pl">香格里拉 · 同上一家<small>连住第二晚</small></td><td class="why"><b>长途前夜，养精蓄锐。</b>次日要开 620 km。连住两晚行李不用搬。</td></tr>
-        <tr><td class="dd">D8<span class="dt">10/7 周三</span></td><td><span class="sb sb-tent">⛺ 露营</span></td><td class="pl">呈贡 · 昆明东南郊营地<small>¥20 / 车</small></td><td class="why">10 月昆明夜间 12–15 ℃，不冷。营地在<b>昆明东南，次日上 G80 回平果不绕路</b>。</td></tr>
+        <tr><td class="dd">D7<span class="dt">10/6 周二</span></td><td><span class="sb sb-hotel">🏨 民宿</span></td><td class="pl">香格里拉 · 同上一家<small>连住第二晚</small></td><td class="why"><b>硬开前夜，养精蓄锐。</b>次日 1,150 km 且<b>只能 A 一人开</b>。连住两晚行李不用搬。</td></tr>
+        <tr><td class="dd">D8<span class="dt">10/7 周三</span></td><td><span class="sb sb-car">🚗 睡车</span></td><td class="pl">百色／沿途服务区<small>¥0</small></td><td class="why"><b>硬开白嫖日。</b>赶在 24:00 前下高速，就近睡车里或开钟点房。<span style="color:var(--red)"><b>若触发熔断，昆明／兴义住店，别硬撑。</b></span></td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="warnbar" style="margin-top:14px">
-    <b>🚨 原睡眠方案作废，必须重做。</b>之前假设「后排放倒躺 2 人 + 2 顶帐篷」，现在两个前提都没了：
-    <b>后排不能放倒</b>（车里没法平躺）+ <b>只有 1 顶帐篷</b>（最多睡 3–4 人）。
-    5 个人要过 4 个露营夜，下面是 4 个解法，<b>我推荐 A</b>。
+    <b>🚨 原睡眠方案作废。</b>之前假设「后排放倒躺 2 人 + 2 顶帐篷」，现在两个前提都没了：
+    <b>后排不能放倒</b>（车里没法平躺）+ <b>家里只有 1 顶帐篷，不买新的</b>。
+    现在改成 <b>露营 3 + 睡车 2</b>，实际要过的是 <b>3 个露营夜</b>，压力小了不少，下面是解法。
+  </div>
+
+  <div class="okbar" style="margin-top:10px">
+    <b>老大定了：帐篷不买，就用家里那顶。那关键问题变成——那顶帐篷是几人帐？</b><br>
+    · 如果是 <b>5–6 人帐（家庭帐／大帐篷）</b>：5 人塞得下，<b>问题解决，一分钱不花</b>，直接跳到下面看必备品清单。<br>
+    · 如果是 <b>3–4 人帐（最常见）</b>：<b>还差 1–2 个位置</b>。别买，<b>去借一顶</b>——亲戚、同学、同事、学校的户外社团，
+    问一圈基本都能借到，<b>成本 ¥0</b>。实在借不到再走下面的方案 B／C。<br>
+    <span style="color:var(--red)"><b>出发前一定要把帐篷翻出来实际撑一次</b>，数数能躺几个人，顺便检查有没有霉斑、杆子断没断、地钉齐不齐。</span>
   </div>
 
   <div class="card" style="padding:13px 15px;margin-top:12px">
@@ -759,11 +771,11 @@ footer b{color:var(--blue)}
       <thead><tr><th style="width:16%">方案</th><th style="width:20%">怎么睡</th><th style="width:16%">额外成本</th><th style="width:11%">舒适度</th><th>评价</th></tr></thead>
       <tbody>
         <tr class="pick">
-          <td><b>A 推荐</b><br><span style="font-size:11.5px">再弄一顶帐篷</span></td>
-          <td>3 人帐 + 2 人帐<br>5 人全部躺平</td>
-          <td>借 = <b>¥0</b><br>买 ≈ <b>¥200</b></td>
+          <td><b>A 推荐</b><br><span style="font-size:11.5px">再<b>借</b>一顶帐篷</span></td>
+          <td>家里那顶（3–4 人）<br>+ 借来的 1 顶<br>5 人全部躺平</td>
+          <td>借 = <b>¥0</b><br><span style="font-size:11.5px;color:var(--gray)">（不买，尊重老大决定）</span></td>
           <td>★★★★★</td>
-          <td><b>最优解。</b>迪卡侬 2 秒快开帐约 ¥199，或找朋友借一顶。<b>帐篷是资产不是花销</b>，以后还能用——这是整趟旅行性价比最高的一笔投入。</td>
+          <td><b>最优解，且不用花钱。</b>找亲戚／同学／同事／学校户外社团借一顶，基本都能借到。<b>如果家里那顶本身就是 5–6 人帐，连借都不用借。</b></td>
         </tr>
         <tr>
           <td><b>B</b><br><span style="font-size:11.5px">营地加开 1 间</span></td>
@@ -1007,25 +1019,27 @@ footer b{color:var(--blue)}
     <table class="ftable">
       <thead><tr><th>项目</th><th style="width:40%">说明</th><th style="text-align:right">金额</th></tr></thead>
       <tbody>
-        <tr><td><b>油费</b></td><td style="font-size:12.5px;color:var(--gray)">3,200 km ÷ 100 × 8L × ¥7.5/L<span class="sub">SUV 满载综合油耗，油价按 ¥7.5 估</span></td><td class="num">¥1,900</td></tr>
-        <tr class="pay"><td><b>过路费</b></td><td style="font-size:12.5px;color:var(--gray)">仅 D9（10/8）昆明 → 平果 780 km<span class="sub">去程 + D8 均在免费期内；10/8 已过期，正常计费</span></td><td class="num">¥350</td></tr>
+        <tr><td><b>油费</b></td><td style="font-size:12.5px;color:var(--gray)">3,050 km ÷ 100 × 8L × ¥7.5/L<span class="sub">SUV 满载综合油耗，油价按 ¥7.5 估</span></td><td class="num">¥1,830</td></tr>
+        <tr><td><b>过路费</b> <span style="color:var(--green);font-size:11.5px">✅ 白嫖</span></td><td style="font-size:12.5px;color:var(--gray)"><b>¥0</b>——10/7 24:00 前驶离高速 + 10/8 走 G324 国道<span class="sub">改走硬开方案后归零；若中途触发熔断，次日那段约 ¥150–350</span></td><td class="num">¥0</td></tr>
         <tr><td><b>门票</b></td><td style="font-size:12.5px;color:var(--gray)">4 学生票 + 1 退伍军人免票<span class="sub">原价 ¥2,745 → 实付 ¥1,498，省 ¥1,247</span></td><td class="num">¥1,498</td></tr>
         <tr><td><b>民宿 3 晚</b></td><td style="font-size:12.5px;color:var(--gray)">丽江 1 晚 + 香格里拉 2 晚，各开 1 间<span class="sub">国庆经济型/家庭房约 ¥350/晚；若选供氧民宿 ¥450–650/晚，预算上浮 ¥300–600</span></td><td class="num">¥1,050</td></tr>
-        <tr><td><b>营地 4 晚</b></td><td style="font-size:12.5px;color:var(--gray)">大理 2 晚 ¥196 + 丽江 1 晚 + 昆明 1 晚 ¥20<span class="sub">⚠ 丽江营地若按人头收（¥58×5=¥290）需上浮，此处按 ¥234 估</span></td><td class="num">¥450</td></tr>
+        <tr><td><b>营地 3 晚</b></td><td style="font-size:12.5px;color:var(--gray)">大理 2 晚 ¥196 + 丽江 1 晚<span class="sub">⚠ 丽江营地若按人头收（¥58×5=¥290）需上浮，此处按 ¥234 估。D8 改睡车里，昆明营地 ¥20 省掉</span></td><td class="num">¥430</td></tr>
         <tr><td><b>停车 / 杂项</b></td><td style="font-size:12.5px;color:var(--gray)">景区停车、磻溪停车场、洗车、备用金</td><td class="num">¥200</td></tr>
-        <tr class="sum"><td>合计</td><td style="font-size:12.5px;color:var(--gray);font-weight:400">5 人 9 天，不含餐饮与自购装备</td><td class="num">¥5,448</td></tr>
-        <tr class="sum"><td>人均</td><td style="font-size:12.5px;color:var(--gray);font-weight:400">预算上限 ¥1,500，实估 ¥1,090</td><td class="num">¥1,090</td></tr>
+        <tr class="sum"><td>合计</td><td style="font-size:12.5px;color:var(--gray);font-weight:400">5 人 9 天，不含餐饮与自购装备</td><td class="num">¥5,008</td></tr>
+        <tr class="sum"><td>人均</td><td style="font-size:12.5px;color:var(--gray);font-weight:400">预算上限 ¥1,500，实估 ¥1,002</td><td class="num">¥1,002</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="card" style="margin-top:12px;padding:13px 15px">
     <div style="font-size:13.5px;line-height:1.85">
-      <b style="color:var(--blue)">这一版预算的三个变化</b><br>
+      <b style="color:var(--blue)">这一版预算的变化（改硬开方案后）</b><br>
       <span style="color:var(--gray);font-size:12.5px">
-      · <b>过路费 ¥0 → ¥350</b>：免费期实际是 <b>10/1 00:00 – 10/7 24:00</b>（不是 10/8），D9 那段要付费。这是本版最大的修正。<br>
-      · <b>油费 ¥1,700 → ¥1,900</b>：重新细算里程，实际总里程约 <b>3,200 km</b>（此前估的 2,800 km 偏少）。<br>
-      · <b>营地 ¥400 → ¥450</b>：丽江营地收费口径不确定（按车 vs 按人），按中间值上调并留出余量。
+      · <b style="color:var(--green)">过路费 ¥350 → ¥0 ✅</b>：<b>你朋友要的白嫖达成了。</b>10/7 24:00 前驶离高速（1,150 km 全免）+ 10/8 走 G324 国道（本身不收费）。<br>
+      · <b>油费 ¥1,900 → ¥1,830</b>：新路线总里程 3,050 km（原 3,200 km，比原方案还少 150 km）。<br>
+      · <b>营地 ¥450 → ¥430</b>：D8 从昆明营地改成睡车里，省掉 ¥20。<br>
+      · <b>总费用 ¥5,448 → ¥5,008，人均 ¥1,090 → ¥1,002。</b>比原方案还便宜 ¥440，同时保住了普达措和纳帕海。<br>
+      · <span style="color:var(--red)"><b>唯一代价：10/7 要开 1,150 km，且只能 A 一人开。所以熔断线必须照做。</b></span>
       </span>
     </div>
   </div>
@@ -1073,10 +1087,10 @@ footer b{color:var(--blue)}
         <div class="cline"><span class="lb">过路费</span><span class="vl">¥350</span></div>
         <div class="cline"><span class="lb">门票（含优惠）</span><span class="vl">¥1,498</span></div>
         <div class="cline"><span class="lb">民宿 3 晚</span><span class="vl">¥1,050</span></div>
-        <div class="cline"><span class="lb">营地 4 晚</span><span class="vl">¥450</span></div>
+        <div class="cline"><span class="lb">营地 3 晚</span><span class="vl">¥430</span></div>
         <div class="cline"><span class="lb">杂项</span><span class="vl">¥200</span></div>
-        <div class="tot"><span class="lb">合计</span><span class="vl">¥5,448</span></div>
-        <div class="pp">人均 <b>¥1,090</b></div>
+        <div class="tot"><span class="lb">合计</span><span class="vl">¥5,008</span></div>
+        <div class="pp">人均 <b>¥1,002</b></div>
       </div>
     </div>
     <div class="cbox">
@@ -1095,12 +1109,12 @@ footer b{color:var(--blue)}
 
   <div class="card" style="margin-top:12px;padding:13px 15px">
     <div style="font-size:13.5px;line-height:1.85">
-      <b>结论：自驾省 ¥5,830（人均省 ¥1,166），且自由度碾压。</b><br>
+      <b>结论：自驾省 ¥6,270（人均省 ¥1,254），且自由度碾压。</b><br>
       <span style="color:var(--gray);font-size:12.5px">
       ① <b>车票口径：</b>平果/百色 → 大理需经昆明南中转，二等座单程约 <b>¥335 – ¥378</b>，往返 × 5 人 = ¥3,780。<br>
       ② <b>动车方案最大痛点是住宿</b>：国庆大理/丽江标间普遍 ¥300–500/晚且一房难求，5 人 7 晚至少 3 间房 → ¥4,200 起步，这一项就抵掉自驾全部油费 + 过路费。<br>
       ③ <b>自驾的隐性优势</b>：凌晨 5:40 出发追日照金山、清晨 8 点前卡 S 弯——这些黄金时段只有自驾能做到。<br>
-      ④ <b>自驾的代价</b>：3,200 km 长途驾驶疲劳。<b>而你们只有 1 名合法的高速司机</b>（实习期规定需驾龄满 3 年陪同），这是比花钱更值得担心的点。
+      ④ <b>自驾的代价</b>：3,050 km 长途驾驶疲劳。<b>而你们只有 1 名合法的高速司机</b>（实习期规定需驾龄满 3 年陪同），<b>10/7 那天要独自开 1,150 km</b>——这是比花钱更值得担心的点，熔断线务必照做。
       </span>
     </div>
   </div>
@@ -1202,7 +1216,7 @@ footer b{color:var(--blue)}
   <div class="tl">
     <div class="tlrow urgent"><div class="tld">9/20 前</div><div class="tlc"><b>订 3 晚民宿 + 打 3 通营地电话</b><span>国庆房越晚越贵。<b>先电话确认「5 人一间」再下单</b>。营地：大理 18587209521、丽江 18088932269（<b>重点问清按车还是按人收费</b>）。</span></div></div>
     <div class="tlrow urgent"><div class="tld">9/27 20:00</div><div class="tlc"><b>抢玉龙雪山大索道票（10/4 场次）</b><span>「丽江旅游集团」微信小程序，<b>提前 7 天、每晚 20:00 放票</b>，日限 1 万张。国庆场通常 <b>3–5 分钟售罄</b>。19:55 就进小程序等着，提前填好全部乘车人信息。</span></div></div>
-    <div class="tlrow urgent"><div class="tld">9/29 前</div><div class="tlc"><b>车辆保养 + 检查</b><span>机油、刹车片、轮胎磨损、胎压、冷却液、雨刮。跑 3,200 km 的长途，出发前不检查是最常见的翻车原因。</span></div></div>
+    <div class="tlrow urgent"><div class="tld">9/29 前</div><div class="tlc"><b>车辆保养 + 检查</b><span>机油、刹车片、轮胎磨损、胎压、冷却液、雨刮。跑 3,050 km 的长途（其中 10/7 单日 1,150 km），出发前不检查是最常见的翻车原因。</span></div></div>
     <div class="tlrow warn"><div class="tld">9/29 前</div><div class="tlc"><b>确认证件 + 睡袋温标</b><span>4 本学生证（本人、在有效期内）+ 1 本退伍军人优待证，拍照存手机备份。<b>确认睡袋是 0 ℃ 温标</b>，不是夏款。</span></div></div>
     <div class="tlrow warn"><div class="tld">9/28 – 9/30</div><div class="tlc"><b>开始吃红景天</b><span>提前 3 天服用，到高原时血液携氧能力更好。这 3 天别熬夜、别剧烈运动。</span></div></div>
     <div class="tlrow"><div class="tld">10/1 00:00</div><div class="tlc"><b>高速免费期开始</b><span>免费期 <b>10/1 00:00 – 10/7 24:00</b>（共 7 天），以驶离高速时间为准。<b>D1 晚上不下高速</b>，去程即可全程免费。</span></div></div>
@@ -1222,7 +1236,7 @@ footer b{color:var(--blue)}
   <div class="risk">
     <div class="risk-h">⚠️ 出发前必须想清楚的 8 件事</div>
     <ul>
-      <li><b>司机问题是第一风险，不是高反。</b>实习期驾照上高速需驾龄满 3 年的人陪同，否则罚款 200 元、<b>出事故保险可拒赔</b>。你们 5 人里符合高速驾驶条件的只有 A 一人，<b>意味着 3,200 km 里绝大多数高速路段只能他一个人扛</b>。要么严格执行「每 2 小时进服务区强制休息 20 分钟」，要么重新评估返程强度。</li>
+      <li><b>司机问题是第一风险，不是高反。</b>实习期驾照上高速需驾龄满 3 年的人陪同，否则罚款 200 元、<b>出事故保险可拒赔</b>。你们 5 人里符合高速驾驶条件的只有 A 一人，<b>意味着 3,050 km 里绝大多数高速路段只能他一个人扛，尤其 10/7 单日 1,150 km</b>。必须严格执行「每 2–2.5 小时进服务区强制休息 20 分钟」，并设好三条熔断线；老大只能接手国道段（如 10/8 百色→平果 100 km）。</li>
       <li><b>高反是真实存在的风险。</b>玉龙雪山 4,680 m、香格里拉 3,300 m。队友中有人十几年前有高反史。氧气瓶、红景天必带，感觉剧烈头痛恶心立即下撤，<b>不要硬撑</b>。</li>
       <li><b>玉龙雪山大索道可能抢不到票。</b>国庆日限 1 万张，秒空是常态。抢不到就改<b>云杉坪索道</b>（3,240 m，票好买）或<b>牦牛坪索道</b>。<b>甘海子看日照金山不需要索道票</b>，行程不塌。</li>
       <li><b>洱海边禁止野营，别心存侥幸。</b>《洱海保护管理条例》第四十三条明确禁止在洱海湖区和湖滨带露营，违者罚款 100–1,000 元，已有游客被罚 200 元的记录。<b>必须进商业营地。</b></li>
