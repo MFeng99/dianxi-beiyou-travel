@@ -64,25 +64,36 @@ def get_token():
     return ""
 
 
-def api(path, method="GET", data=None, timeout=60):
-    req = urllib.request.Request(
-        "https://api.github.com" + path,
-        method=method,
-        data=json.dumps(data).encode("utf-8") if data is not None else None,
-        headers={
-            "Authorization": "Bearer " + get_token(),
-            "Accept": "application/vnd.github+json",
-            "Content-Type": "application/json",
-            "User-Agent": "dianxi-travel-push",
-        },
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            return json.loads(r.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        return {"_error": e.code, "_body": e.read().decode("utf-8", "ignore")[:300]}
-    except Exception as e:
-        return {"_error": -1, "_body": str(e)[:300]}
+def api(path, method="GET", data=None, timeout=90, retries=4):
+    """国内访问 api.github.com 常被 SSL 重置/掐断，必须重试。"""
+    last = None
+    for i in range(retries):
+        req = urllib.request.Request(
+            "https://api.github.com" + path,
+            method=method,
+            data=json.dumps(data).encode("utf-8") if data is not None else None,
+            headers={
+                "Authorization": "Bearer " + get_token(),
+                "Accept": "application/vnd.github+json",
+                "Content-Type": "application/json",
+                "User-Agent": "dianxi-travel-push",
+            },
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", "ignore")[:300]
+            # 4xx 是请求本身有问题，重试没用，直接返回
+            if 400 <= e.code < 500:
+                return {"_error": e.code, "_body": body}
+            last = {"_error": e.code, "_body": body}
+        except Exception as e:
+            last = {"_error": -1, "_body": str(e)[:300]}
+        if i < retries - 1:
+            log(f"      网络抖动，{i + 1}/{retries} 次重试...")
+            time.sleep(2 * (i + 1))
+    return last or {"_error": -1, "_body": "unknown"}
 
 
 def enc(path):
@@ -109,15 +120,21 @@ def remote_content(path):
 def api_upload(path, message):
     p = ROOT / path
     local = p.read_bytes()
-    remote = remote_content(path)
-    if remote == local:
-        return "skip", f"{path} 云端已是最新，无需上传"
+    meta = remote_meta(path)          # 只取一次，避免多发一次请求又断
+    if "_error" in meta:
+        return "fail", f"{path} 读不到云端信息，跳过：{meta.get('_error')} {meta.get('_body','')[:120]}"
+    if "content" in meta and meta.get("encoding") == "base64":
+        if base64.b64decode(meta["content"]) == local:
+            return "skip", f"{path} 云端已是最新，无需上传"
+    sha = meta.get("sha")
+    if not sha:
+        return "fail", f"{path} 拿不到云端 sha，跳过（不能发空 sha，会 422）"
     d = api(f"/repos/{REPO}/contents/{enc(path)}", "PUT", {
         "message": message,
         "content": base64.b64encode(local).decode("utf-8"),
-        "sha": remote_sha(path),
+        "sha": sha,
         "branch": BRANCH,
-    }, timeout=120)
+    }, timeout=180)
     if "commit" in d:
         return "ok", f"{path} 已上传（commit {d['commit']['sha'][:8]}）"
     return "fail", f"{path} 上传失败：{d.get('_error')} {d.get('_body', '')[:200]}"
