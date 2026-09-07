@@ -101,8 +101,32 @@ def enc(path):
     return urllib.parse.quote(path)
 
 
+def git_blob_sha(data):
+    """git 的 blob 对象 sha：sha1('blob <len>\\0' + 内容)"""
+    import hashlib
+    return hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
+
+
 def remote_meta(path):
-    return api(f"/repos/{REPO}/contents/{enc(path)}?ref={BRANCH}")
+    # 先试 contents API；大文件在国内常被 SSL 掐断，
+    # 断掉就退回 trees API 只取 sha（响应很小，不容易断）。
+    d = api(f"/repos/{REPO}/contents/{enc(path)}?ref={BRANCH}")
+    if "_error" not in d:
+        return d
+    sha = remote_sha_via_tree(path)
+    if sha:
+        return {"sha": sha, "_meta_only": True}
+    return d
+
+
+def remote_sha_via_tree(path):
+    """用 git trees API 拿 blob sha —— 响应只有几 KB，不会像 contents API
+    那样因为返回整个文件内容而被 SSL 掐断。"""
+    d = api(f"/repos/{REPO}/git/trees/{BRANCH}?recursive=1")
+    for item in d.get("tree", []):
+        if item.get("path") == path and item.get("type") == "blob":
+            return item.get("sha")
+    return None
 
 
 def remote_sha(path):
@@ -136,7 +160,12 @@ def api_upload(path, message):
         "branch": BRANCH,
     }, timeout=180)
     if "commit" in d:
-        return "ok", f"{path} 已上传（commit {d['commit']['sha'][:8]}）"
+        # 校验：算本地 git blob sha，跟云端比对，确认真的传对了
+        want = git_blob_sha(local)
+        got = remote_sha_via_tree(path)
+        if got and got != want:
+            return "fail", f"{path} 上传后校验不一致（云端 {got[:8]} != 本地 {want[:8]}），请重跑"
+        return "ok", f"{path} 已上传（commit {d['commit']['sha'][:8]}，校验通过）"
     return "fail", f"{path} 上传失败：{d.get('_error')} {d.get('_body', '')[:200]}"
 
 
